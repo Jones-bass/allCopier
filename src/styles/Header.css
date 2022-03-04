@@ -1,0 +1,34 @@
+
+
+.page-home {
+  display: grid;
+  color: #fff;
+  height: 97vh;
+  justify-content: center;
+  background: tomato;
+}
+
+  .logoHome {
+   padding: 50px;
+  }
+
+  h1 {
+    display: grid;
+    justify-items: center;
+  }
+
+  .buttonHome {
+    display: flex;
+    justify-content: space-between;
+    max-width: none;
+    margin-bottom: 50px;
+    padding: 15px;
+  }
+
+  button {
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+

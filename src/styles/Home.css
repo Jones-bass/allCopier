@@ -1,0 +1,31 @@
+
+
+.page-home {
+  display: grid;
+  color: #fff;
+  height: 97vh;
+  justify-content: center;
+  background: tomato;
+}
+
+  .logoHome {
+   padding: 50px;
+  }
+
+  .login::after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 17px;
+    background: url('../assets/usuario.svg') no-repeat center center;
+    margin-left: 0.5rem;
+    position: relative;
+    top: -1px;
+  }
+  
+
+
+
+
+
+
