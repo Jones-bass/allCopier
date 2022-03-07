@@ -1,0 +1,77 @@
+
+.imgPersonalizados{
+  max-width: 600px;
+  display: block;
+  border-radius: 5px;
+}
+
+.conteudo {
+  display: grid;
+	flex-wrap: wrap;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr;
+  margin: 0px 90px 30px 90px;
+} 
+
+.intro {
+  background-color: #fff;
+  padding: 40px;
+  text-align: right;
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  justify-items: end;
+}
+
+.detail {
+  width: 60px;
+  height: 6px;
+  background: tomato;
+  display: inline-block;
+
+}
+.buttonRed {
+  background: tomato;
+  opacity: 0.9;
+  color: aliceblue;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1 {
+  display: flex;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 50px;
+  padding: 12px;
+  text-align: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  color: gray;
+  padding: 40px;
+  align-self: center;
+}
+
+.vantagens {
+  background: #fff;
+  padding: 40px;
+}
+
+.vantagens-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+}
+
+.vantagens-item p {
+  grid-column: 2;
+}
+
+
