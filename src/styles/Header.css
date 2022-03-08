@@ -1,34 +1,21 @@
-
-
-.page-home {
-  display: grid;
-  color: #fff;
-  height: 97vh;
-  justify-content: center;
-  background: tomato;
+.header {
+  width: 100%;
+  background: white;
+  top: 0px;
 }
 
-  .logoHome {
-   padding: 50px;
-  }
+.login::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background: url('../assets/usuario.svg') no-repeat center center;
+  margin-left: 0.5rem;
+  position: relative;
+  margin-right: 20px;
+  top: 2px;
+}
 
-  h1 {
-    display: grid;
-    justify-items: center;
-  }
-
-  .buttonHome {
-    display: flex;
-    justify-content: space-between;
-    max-width: none;
-    margin-bottom: 50px;
-    padding: 15px;
-  }
-
-  button {
-    border-radius: 5px;
-    cursor: pointer;
-  }
 
 
 
