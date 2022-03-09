@@ -1,5 +1,5 @@
-import React, { createContext, useState } from "react";
-import { TOKEN_POST, USER_GET } from "./api";
+import React, { createContext, useEffect, useState } from "react";
+import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from "./api";
 
 export const UserContext = createContext();
 
@@ -8,6 +8,26 @@ export const UserStorage = ({ children }) => {
   const [login, setLogin] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function autoLogin() {
+      const token = window.localStorage.getItem('token');
+      if (token) {
+        try {
+          setError(null);
+          setLoading(null);
+          const { url, options } = TOKEN_VALIDATE_POST(token);
+          const response = await fetch(url, options);
+          if (!response.ok) throw new Error('token invalido');
+          await getUser(token);
+        } catch (err) {
+        } finally {
+          setLoading(false);
+        }
+      }
+    }
+    autoLogin();
+  }, [])
 
   async function getUser(token) {
     const { url, options } = USER_GET(token);
@@ -25,5 +45,13 @@ export const UserStorage = ({ children }) => {
     getUser(token);
   }
 
-  return <UserContext.Provider value={{ userLogin, data }}>{children}</UserContext.Provider>;
+  async function userLogout() {
+    setData(null);
+    setError(null);
+    setLoading(false);
+    setLogin(false);
+    window.localStorage.removeItem('token')
+  }
+
+  return <UserContext.Provider value={{ userLogin, userLogout, data }}>{children}</UserContext.Provider>;
 };

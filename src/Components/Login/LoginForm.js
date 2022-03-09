@@ -12,7 +12,7 @@ const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  const { userLogin, data } = useContext(UserContext);
+  const { userLogin, userLogout, data } = useContext(UserContext);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -31,6 +31,7 @@ const LoginForm = () => {
         {data ? (
           <Link className="login" to="/visitante">
             {data.nome}
+            <button onClick={userLogout}>Sair</button>
           </Link>
         ) : (
           <Link className="login" to="/criar">
@@ -44,6 +45,7 @@ const LoginForm = () => {
         <Input label="Senha" type="password" name="password" {...password} />
         <Button>Entrar</Button>
       </form>
+     
     </section>
   );
 };
