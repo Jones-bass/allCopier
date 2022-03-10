@@ -12,7 +12,7 @@ const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  const { userLogin, userLogout, data } = useContext(UserContext);
+  const { userLogin, error, loading } = useContext(UserContext);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -27,25 +27,27 @@ const LoginForm = () => {
         <Link className="logo" to="/" aria-label="Home">
           <LogoMarca />
         </Link>
-        <Link to="/"></Link>
-        {data ? (
-          <Link className="login" to="/visitante">
-            {data.nome}
-            <button onClick={userLogout}>Sair</button>
-          </Link>
-        ) : (
-          <Link className="login" to="/criar">
-            Criar
-          </Link>
-        )}
       </header>
       <h1>Login</h1>
       <form action="" onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
-        <Button>Entrar</Button>
+        {loading ? (
+          <Button disabled>Carregando...</Button>
+        ) : (
+          <Button>Entrar</Button>
+        )}
+        {error && <p>{error}</p>}
       </form>
-     
+      <Link className='perdeu' to="/login/perdeu">
+        Perdeu a Senha?
+      </Link>
+      <div>
+        <br />
+        <p>Ainda não possui conta?</p>
+        <Link to="/login/criar" className='subtitle'>Cadastre-se
+        </Link>
+      </div>
     </section>
   );
 };
