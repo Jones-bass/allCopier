@@ -4,7 +4,6 @@ import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import useForm from '../../Hooks/useForm';
 import { UserContext } from "../../UserContext";
-import { ReactComponent as LogoMarca } from "../../assets/tudoo.svg";
 import "../../styles/Header.css";
 
 
@@ -23,11 +22,7 @@ const LoginForm = () => {
 
   return (
     <section>
-      <header className="header">
-        <Link className="logo" to="/" aria-label="Home">
-          <LogoMarca />
-        </Link>
-      </header>
+      <div className='animeLeft'>
       <h1>Login</h1>
       <form action="" onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
@@ -47,6 +42,7 @@ const LoginForm = () => {
         <p>Ainda não possui conta?</p>
         <Link to="/login/criar" className='subtitle'>Cadastre-se
         </Link>
+      </div>
       </div>
     </section>
   );
