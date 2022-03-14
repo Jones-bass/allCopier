@@ -15,7 +15,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
+  justify-content: left;
+  align-items: center;
 }
 
 .header-menu a {
@@ -31,3 +32,19 @@ nav a:hover{
   background-color: tomato;
   color: rgb(243, 241, 241);
 }
+
+.user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user button {
+  align-items: center;
+  justify-content: center;
+  border-color: tomato;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+

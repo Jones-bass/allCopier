@@ -13,10 +13,10 @@ export function Home() {
         <h1>Serviços Graficos</h1>
         <div className='button'>
         <Button >
-          <Link to="/visitante">Visitar o Site</Link>
+          <Link to="/home">Visitar o Site</Link>
         </Button>
         <Button>
-          <Link to="/login">Cadastro</Link>
+          <Link to="/login">Comprar</Link>
         </Button>
         </div>
       </div>

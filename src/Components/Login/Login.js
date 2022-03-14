@@ -8,7 +8,7 @@ import LoginPasswordReset from './LoginPasswordReset';
 
 const Login = () => {
   const { login } = useContext(UserContext);
-  if(login === true) return <Navigate to='/visitante' />
+  if(login === true) return <Navigate to='/home' />
   return <div>
     <Routes>
       <Route path="/" element={<LoginForm /> } />

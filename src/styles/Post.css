@@ -1,13 +1,14 @@
 
 .imgPersonalizados{
-  max-width: 600px;
+  display: grid;
+  max-width: 100%;
   display: block;
-  border-radius: 5px;
+  flex-wrap: wrap;
 }
 
 .conteudo {
   display: grid;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 100%;
   grid-template-columns: 1fr 1fr;
   margin: 0px 90px 30px 90px;
