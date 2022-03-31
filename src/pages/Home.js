@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logoImg from '../assets/tudo.png';
-import Button from '../Components/Forms/Button';
 import '../styles/Home.css';
 
 export function Home() {
@@ -9,15 +8,15 @@ export function Home() {
   return (
     <div className="page-home">
       <img className="logoHome" src={logoImg} alt="LogoInicial" />
-      <div className='buttonHome'>
+      <div>
         <h1>Serviços Graficos</h1>
-        <div className='button'>
-        <Button >
-          <Link to="/home">Visitar o Site</Link>
-        </Button>
-        <Button>
-          <Link to="/login">Comprar</Link>
-        </Button>
+        <div className='buttonContainer'>
+          <button className='buttonHome'>
+            <Link style={{ color: "white", fontSize: '22px', fontWeight: 'bold' }} to="/home">Visitar o Site</Link>
+          </button>
+          <button className='buttonHome'>
+            <Link style={{ color: "white", fontSize: '22px', fontWeight: 'bold' }} to="/login">Comprar</Link>
+          </button>
         </div>
       </div>
     </div>
