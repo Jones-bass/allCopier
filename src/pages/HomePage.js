@@ -6,7 +6,7 @@ import { ReactComponent as Sair } from "../assets/sair.svg";
 
 import Footer from "./Footer";
 import Post from "./Post";
-import "../styles/HomePage.css";
+import "../styles/HomePage.scss";
 
 const HomePage = () => {
   const { data, userLogout } = useContext(UserContext);

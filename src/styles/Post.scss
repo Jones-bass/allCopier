@@ -1,9 +1,20 @@
 
-.imgPersonalizados{
-  display: grid;
-  max-width: 100%;
-  display: block;
-  flex-wrap: wrap;
+h1 {
+  display: flex;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 50px;
+  padding: 12px;
+  text-align: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  color: gray;
+  padding: 40px;
+  align-self: center;
 }
 
 .conteudo {
@@ -13,6 +24,12 @@
   grid-template-columns: 1fr 1fr;
   margin: 0px 90px 30px 90px;
 } 
+
+.imgPersonalizados{
+  max-width: 100%;
+  display: block;
+  flex-wrap: wrap;
+}
 
 .intro {
   background-color: #fff;
@@ -41,24 +58,6 @@
   font-weight: bold;
 }
 
-h1 {
-  display: flex;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 50px;
-  padding: 12px;
-  text-align: center;
-  justify-content: center;
-}
-
-h2 {
-  font-size: 80px;
-  text-transform: uppercase;
-  color: gray;
-  padding: 40px;
-  align-self: center;
-}
-
 .vantagens {
   background: #fff;
   padding: 40px;
@@ -75,4 +74,28 @@ h2 {
   grid-column: 2;
 }
 
+@media (max-width: 720px){
+  .conteudo {
+    display: flex;
+    flex-wrap: wrap;
+   
+    margin: 0;
+  } 
+  h1{
+    font-size: 2rem;
+    text-align: end;
+  }
+  h2 {
+    font-size: 3.2rem;
+    background-color: gray;
+    text-align: center;
+    align-self: center;
+    color: rgb(252, 249, 249);
+    padding: 20px;
+  }
+  .buttonRed{
+  padding: 5px 15px;
+  border-radius: 2px;
+  }
+}
 

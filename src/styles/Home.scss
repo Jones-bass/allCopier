@@ -36,7 +36,22 @@
     box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
   }
   
+  @media (max-width: 720px){
+    .logoHome{
+      width: 270px;
+      height: 244px;
+      margin: auto;
+    }
+  }
 
+  @media (max-width: 720px){
+    .page-home{
+      text-decoration: none;
+       h1{
+      font-size: 2.5rem;
+      }
+    }
+  }
 
   
 

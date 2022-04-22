@@ -3,7 +3,7 @@ import { Home } from "./pages/Home";
 import HomePage from "./pages/HomePage";
 import Login from "./Components/Login/Login";
 import { UserStorage } from "./UserContext";
-import './App.css';
+import './App.scss';
 
 
 function App() {

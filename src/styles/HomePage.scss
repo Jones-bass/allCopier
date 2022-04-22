@@ -47,4 +47,27 @@ nav a:hover{
   margin-left: 5px;
 }
 
+@media (max-width: 720px){
+  .containerHeader {
+    background-color: red;
+  }
+  .header{
+    display: grid;
+    background-color: aqua;
+    background: rgb(238, 237, 237);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+    display: none;
+  }
+  .header-menu{
+    display: flex;
+  }
+  .user {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 
