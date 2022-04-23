@@ -6,8 +6,8 @@ import '../Home/Home.scss';
 export function Home() {
 
   return (
-    <div className="page-home">
-      <img className="logoHome" src={logoImg} alt="LogoInicial" />
+    <div className="pageHome">
+      <img className="App-logo" src={logoImg} alt="LogoInicial" />
       <div>
         <h1>Serviços Graficos</h1>
         <div className='buttonContainer'>

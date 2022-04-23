@@ -17,7 +17,7 @@ const HomePage = () => {
         <Link className="logo" to="/" aria-label="Home">
         <img src={LogoMarca} alt="LogoMarca" />
         </Link>
-        <nav className="header-menu">
+        <nav className="headerMenu">
           <NavLink to="/horarios">Horários</NavLink>
           <NavLink to="/contato">Contato</NavLink>
           <div className="user">

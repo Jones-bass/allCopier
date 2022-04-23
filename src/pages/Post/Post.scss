@@ -67,14 +67,14 @@ h2 {
   padding: 40px;
 }
 
-.vantagens-item {
+.vantagensItem {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
   padding: 20px;
 }
 
-.vantagens-item p {
+.vantagensItem p {
   grid-column: 2;
 }
 
