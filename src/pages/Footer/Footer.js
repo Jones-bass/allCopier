@@ -1,6 +1,6 @@
 import React from 'react'
-import logoCop from '../assets/tudo.png';
-import "../styles/Footer.scss";
+import logoCop from '../../assets/tudo.png';
+import "../Footer/Footer.scss";
 
 
 const Footer = () => {

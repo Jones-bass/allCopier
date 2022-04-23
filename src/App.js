@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
-import HomePage from "./pages/HomePage";
+import { Home } from "./pages/Home/Home";
+import HomePage from "./pages/HomePage/HomePage";
 import Login from "./Components/Login/Login";
 import { UserStorage } from "./UserContext";
 import './App.scss';

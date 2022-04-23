@@ -1,10 +1,10 @@
-import imgCamisa from '../assets/camisa.png';
-import imgCaneca from '../assets/copo.jpg';
+import imgCamisa from '../../assets/camisa.png';
+import imgCaneca from '../../assets/copo.jpg';
 
-import icon1 from '../assets/icon1.svg';
-import icon2 from '../assets/icon2.svg';
-import icon3 from '../assets/icon3.svg';
-import "../styles/Post.scss";
+import icon1 from '../../assets/icon1.svg';
+import icon2 from '../../assets/icon2.svg';
+import icon3 from '../../assets/icon3.svg';
+import "../Post/Post.scss";
 
 
 const Post = () => {

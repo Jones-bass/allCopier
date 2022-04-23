@@ -1,20 +1,4 @@
-.header {
-  width: 100%;
-  background: white;
-  top: 0px;
-}
 
-.login::after {
-  content: '';
-  display: inline-block;
-  width: 14px;
-  height: 17px;
-  background: url('../assets/usuario.svg') no-repeat center center;
-  margin-left: 0.5rem;
-  position: relative;
-  margin-right: 20px;
-  top: 2px;
-}
 
 .perdeu {
   display: inline-block;

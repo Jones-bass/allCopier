@@ -4,7 +4,7 @@ import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import useForm from '../../Hooks/useForm';
 import { UserContext } from "../../UserContext";
-import "../../styles/Header.scss";
+import "../Login/LoginForm.scss";
 
 
 const LoginForm = () => {

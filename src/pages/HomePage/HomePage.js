@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+  import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { UserContext } from "../UserContext";
-import { ReactComponent as LogoMarca } from "../assets/tudoo.svg";
-import { ReactComponent as Sair } from "../assets/sair.svg";
+import { UserContext } from "../../UserContext";
+import LogoMarca  from "../../assets/tudoo.svg";
+import { ReactComponent as Sair } from "../../assets/sair.svg";
 
-import Footer from "./Footer";
-import Post from "./Post";
-import "../styles/HomePage.scss";
+import Footer from "../Footer/Footer";
+import Post from "../Post/Post";
+import "../HomePage/HomePage.scss";
 
 const HomePage = () => {
   const { data, userLogout } = useContext(UserContext);
@@ -15,7 +15,7 @@ const HomePage = () => {
     <div>
       <div className="header">
         <Link className="logo" to="/" aria-label="Home">
-          <LogoMarca />
+        <img src={LogoMarca} alt="LogoMarca" />
         </Link>
         <nav className="header-menu">
           <NavLink to="/horarios">Horários</NavLink>
@@ -27,8 +27,7 @@ const HomePage = () => {
               <button onClick={userLogout}><Sair /></button>
             </>
           ) : (
-            <Link className="login" to="/login">
-              Login
+            <Link className="login" to="/login">Login 
             </Link>
           )}
         </div>

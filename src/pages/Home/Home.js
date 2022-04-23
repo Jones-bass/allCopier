@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImg from '../assets/tudo.png';
-import '../styles/Home.scss';
+import logoImg from '../../assets/tudo.png';
+import '../Home/Home.scss';
 
 export function Home() {
 

@@ -1,14 +1,18 @@
 .header {
-  width: 100%;
-  z-index: 100;
   background: rgb(238, 237, 237);
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo {
-  padding: 1rem;
+  display: flex;
+  height: 5rem;
+  margin-left: 3rem;
 }
 
 .header-menu {
@@ -33,6 +37,18 @@ nav a:hover{
   color: rgb(243, 241, 241);
 }
 
+.login::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background: url('../../assets/usuario.svg') no-repeat center center;
+  margin-left: 0.5rem;
+  position: relative;
+  margin-right: 20px;
+  top: 2px;
+}
+
 .user{
   display: flex;
   justify-content: center;
@@ -48,9 +64,6 @@ nav a:hover{
 }
 
 @media (max-width: 720px){
-  .containerHeader {
-    background-color: red;
-  }
   .header{
     display: grid;
     background-color: aqua;
@@ -59,7 +72,11 @@ nav a:hover{
     align-items: center;
   }
   .logo{
-    display: none;
+    display: flex;
+    height: 5rem;
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: -2.5rem;
   }
   .header-menu{
     display: flex;
@@ -67,6 +84,10 @@ nav a:hover{
   .user {
     align-items: center;
     justify-content: center;
+  }
+  nav a:hover{
+    background-color: tomato;
+    color: rgb(243, 241, 241);
   }
 }
 
