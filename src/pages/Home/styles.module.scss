@@ -12,7 +12,7 @@
   }
 }
  
-  .App-logo {
+  .AppLogo {
    margin-top: 20px;
   }
 
@@ -21,29 +21,30 @@
     font-family: Roboto;  
     font-size: 30px;
     justify-content: space-between;
+
+    button{
+      font-size: 1rem;
+      font-family: var(--type-first);
+      cursor: pointer;
+      border: none;
+      border-radius: 0.4rem;
+      background: #F46F33;
+      min-width: 8rem;
+      padding: 0.8rem 1.2rem;
+      box-sizing: border-box;
+      transition: 0.1s;
+    } 
   }
 
-  .buttonHome {
-    font-size: 1rem;
-    font-family: var(--type-first);
-    cursor: pointer;
-    border: none;
-    border-radius: 0.4rem;
-    background: tomato;
-    min-width: 8rem;
-    padding: 0.8rem 1.2rem;
-    box-sizing: border-box;
-    transition: 0.1s;
-  }
-
-  .buttonHome:hover,
+   .buttonHome:hover,
   .buttonHome:focus {
     outline: none;
+    background-color: #F89531;
     box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
   }
-  
+
   @media (max-width: 720px){
-    .App-logo{
+    .AppLogo{
       width: 22rem;
       height: 14rem;
       margin: auto;
@@ -62,12 +63,12 @@
   //logoFlutuando
 
   @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-float infinite 3s ease-in-out;
+    .AppLogo {
+      animation: AppLogo-float infinite 3s ease-in-out;
     }
   }
     
-  @keyframes App-logo-float {
+  @keyframes AppLogo-float {
     0% {
       transform: translateY(0);
     }
@@ -82,12 +83,12 @@
 
   @media (max-width: 720px){
     @media (prefers-reduced-motion: no-preference) {
-      .App-logo {
-        animation: App-logo-float infinite 3s ease-in-out;
+      .AppLogo {
+        animation: AppLogo-float infinite 3s ease-in-out;
       }
     }
       
-    @keyframes App-logo-float {
+    @keyframes AppLogo-float {
       0% {
         transform: translateY(0);
       }

@@ -1,67 +1,68 @@
 import React from 'react'
 import logoCop from '../../assets/tudo.png';
-import "../Footer/Footer.scss";
+import { FaGithub, FaInstagram, FaYoutube, FaFacebookSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 
+import styles from './styles.module.scss';
 
 const Footer = () => {
   return (
     <footer>
-    <div className="wrapper">
-      <div className="footer-box">
-        <div >
-          <img className="imgFooter" src={logoCop} alt="LogoHeader" />
-          <p>Seja prático e inteligente.</p>
+      <div className={styles.wrapper}>
+        <div className={styles.footerBox}>
+          <div >
+            <img className={styles.imgFooter} src={logoCop} alt="LogoHeader" />
+            <p>Seja prático e inteligente.</p>
+          </div>
+        </div>
+        <div className={styles.footerBox}>
+          <ul className={styles.footerList}>
+            <li>
+              <a href="/">
+              <FaGithub className={styles.fab} color="white" />
+                <span>Whatsapp</span>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+              <FaYoutube className={styles.fab} color="white" />
+                <span>Instaran</span>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+              <FaInstagram className={styles.fab} color="white" />
+                <span>Linkedin</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.footerBox}>
+          <ul className={styles.footerList}>
+            <li>
+              <a href="/">
+              <FaFacebookSquare className={styles.fab} color="white" />
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Jones-bass">
+              <FaLinkedin className={styles.fab} color="white" />
+                <span>Github</span>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+              <FaWhatsappSquare className={styles.fab} color="white" />
+                <span>Youtube</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div className="footer-box">
-        <ul className="footer-list">
-          <li>
-            <a href="/">
-              <i className="fab fa-whatsapp"></i>
-              <span>Whatsapp</span>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <i className="fab fa-instagram"></i>
-              <span>Instaran</span>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <i className="fab fa-linkedin"></i>
-              <span>Linkedin</span>
-            </a>
-          </li>
-        </ul>
+      <div className={styles.footerBottom}>
       </div>
-      <div className="footer-box">
-        <ul className="footer-list">
-          <li>
-            <a href="/">
-              <i className="fab fa-facebook-square"></i>
-              <span>Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Jones-bass">
-              <i className="fab fa-github"></i>
-              <span>Github</span>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <i className="fab fa-youtube"></i>
-              <span>Youtube</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div className="footer-bottom">
-    </div>
-  </footer>
-)
+    </footer>
+  )
 }
 
 export default Footer;
