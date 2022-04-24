@@ -1,6 +1,6 @@
 import React from 'react'
 import logoCop from '../../assets/tudo.png';
-import { FaGithub, FaInstagram, FaYoutube, FaFacebookSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaYoutube, FaFacebookSquare, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 import styles from './styles.module.scss';
 
@@ -18,19 +18,19 @@ const Footer = () => {
           <ul className={styles.footerList}>
             <li>
               <a href="/">
-              <FaGithub className={styles.fab} color="white" />
+              <FaWhatsapp className={styles.fab} color="white" />
                 <span>Whatsapp</span>
               </a>
             </li>
             <li>
               <a href="/">
-              <FaYoutube className={styles.fab} color="white" />
+              <FaInstagram className={styles.fab} color="white" />
                 <span>Instaran</span>
               </a>
             </li>
             <li>
               <a href="/">
-              <FaInstagram className={styles.fab} color="white" />
+              <FaLinkedin className={styles.fab} color="white" />
                 <span>Linkedin</span>
               </a>
             </li>
@@ -46,13 +46,13 @@ const Footer = () => {
             </li>
             <li>
               <a href="https://github.com/Jones-bass">
-              <FaLinkedin className={styles.fab} color="white" />
+              <FaGithub className={styles.fab} color="white" />
                 <span>Github</span>
               </a>
             </li>
             <li>
               <a href="/">
-              <FaWhatsappSquare className={styles.fab} color="white" />
+              <FaYoutube className={styles.fab} color="white" />
                 <span>Youtube</span>
               </a>
             </li>

@@ -5,8 +5,8 @@ import LogoMarca from "../../assets/tudoo.svg";
 import { ReactComponent as Sair } from "../../assets/sair.svg";
 
 import Footer from "../Footer/Footer";
-import Post from "../Post/Post";
 import styles from './styles.module.scss';
+import LandPage from "../LandPage/LandPage";
 
 const HomePage = () => {
   const { data, userLogout } = useContext(UserContext);
@@ -33,7 +33,7 @@ const HomePage = () => {
           </div>
         </nav>
       </div>
-      <Post />
+      <LandPage />
       <Footer />
     </div>
 

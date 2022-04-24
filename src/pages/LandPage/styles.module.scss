@@ -1,0 +1,121 @@
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0rem 2.8rem;
+  box-sizing: border-box;
+  max-width: 85.7rem;
+  padding: 3rem;
+} 
+
+  .intro {
+    background-color: #fff;
+    padding: 2.5rem;
+    text-align: right;
+    display: grid;
+    gap: 1rem;
+    justify-items: end;
+
+  p{
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: end;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+  }
+  a{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.2rem;
+    background: tomato;
+    color: aliceblue;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  a:hover {
+    background-color: red;
+  }
+}
+
+.imgPersonalizados{
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail {
+  width: 4.2rem;
+  height: 0.4rem;
+  background: tomato;
+  display: inline-block;
+}
+
+  h1 {
+    font-size: 5.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    background: rgb(238, 237, 237);
+  }
+
+.sobre {
+	border-top: 0.5rem solid tomato;
+
+  max-width: 85.7rem;
+
+	padding: 4.4rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.sobreInfo {
+	flex: 2 1 300px;
+	margin: 0 10px;
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #080808;
+  }
+}
+
+.sobreImg {
+	flex: 1 1 160px;
+	margin: 0 10px;
+}
+
+@media (max-width: 720px){
+  .conteudo {
+    display: flex;
+    flex-wrap: wrap;
+   
+    margin: 0;
+  } 
+  h1{
+    font-size: 2rem;
+    text-align: end;
+  }
+  h2 {
+    font-size: 3.2rem;
+    background-color: gray;
+    text-align: center;
+    align-self: center;
+    color: rgb(252, 249, 249);
+    padding: 20px;
+  }
+  a{
+  padding: 5px 15px;
+  border-radius: 2px;
+  }
+}
+
