@@ -6,6 +6,7 @@
   box-sizing: border-box;
   max-width: 85.7rem;
   padding: 3rem;
+
 } 
 
   .intro {
@@ -57,21 +58,21 @@
   display: inline-block;
 }
 
+  
+.container{
   h1 {
     font-size: 5.5rem;
     padding: 2.5rem;
     text-align: center;
     background: rgb(238, 237, 237);
   }
-
-.sobre {
-	border-top: 0.5rem solid tomato;
-
-  max-width: 85.7rem;
-
-	padding: 4.4rem;
-	display: flex;
-	flex-wrap: wrap;
+  .sobre {
+    border-top: 0.5rem solid tomato;
+    max-width: 85.7rem;
+    padding: 4.4rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .sobreInfo {
@@ -96,26 +97,81 @@
 
 @media (max-width: 720px){
   .conteudo {
-    display: flex;
+    display: inline;
     flex-wrap: wrap;
-   
     margin: 0;
   } 
-  h1{
-    font-size: 2rem;
-    text-align: end;
+  .intro {
+    gap: 0.2rem;
+    p{
+      font-size: 1rem;
+    }
+    h1{
+      font-size: 2rem;
+      text-align: end;
+    }
+    a{
+      padding: 0.2rem 1rem;
+      border-radius: 0.1rem;
+      }
+ }
+  
+  
+ .container{
+  h1 {
+    font-size: 2.5rem;
+    padding: 1.5rem;
   }
-  h2 {
-    font-size: 3.2rem;
-    background-color: gray;
-    text-align: center;
-    align-self: center;
-    color: rgb(252, 249, 249);
-    padding: 20px;
-  }
-  a{
-  padding: 5px 15px;
-  border-radius: 2px;
+  .sobre {
+    border-top: 0.3rem solid tomato;
+    padding: 1.4rem;
   }
 }
 
+.sobreInfo {
+	flex: 2 1 300px;
+	margin: 0 10px;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+
+  }
+  h2{
+    background: rgb(238, 237, 237);
+    padding: 0.5rem;
+    text-align: center;
+  }
+  li{
+    background: rgb(238, 237, 237);
+    padding: 0.1rem;
+   }
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #080808;
+  }
+ }
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .imgPersonalizados {
+    animation: imgPersonalizados-float infinite 3s ease-in-out;
+  }
+}
+  
+
+
+@keyframes imgPersonalizados-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px)
+  }
+  100% {
+    transform: translateY(0px)
+  }
+}

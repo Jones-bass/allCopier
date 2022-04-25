@@ -8,8 +8,11 @@ export function Home() {
   return (
     <div className={styles.pageHome}>
       <img className={styles.AppLogo} src={logoImg} alt="LogoInicial" />
+      <div className={styles.h1Bottom}>
+      <h1>Serviços Graficos</h1>
+      </div>
+      
       <div>
-        <h1>Serviços Graficos</h1>
         <div className={styles.buttonContainer}>
           <button >
             <Link style={{ color: "white", fontSize: '22px', fontWeight: 'bold' }} to="/home">Visitar o Site</Link>

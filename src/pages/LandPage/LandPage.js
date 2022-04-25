@@ -4,7 +4,6 @@ import imgAlmofadas from '../../assets/almofadas.png';
 import imgAzulejo from '../../assets/azulejo.jpg';
 import img1 from '../../assets/img1.jpg';
 import img2 from '../../assets/img2.jpg';
-import img3 from '../../assets/img3.jpg';
 
 import Post from './Post';
 import styles from './styles.module.scss';
@@ -36,15 +35,15 @@ const LandPage = () => {
         />
       </div>
 
-
-      <h1>SOBRE NÓS</h1>
+      <div className={styles.container}>
+        <h1>SOBRE NÓS</h1>
         <section className={styles.sobre}>
           <div className={styles.sobreInfo}>
             <h1>TudoTudo Copiadora</h1>
             <p>Somos uma empresa especializadas em serviços gráficos há mais de 08 anos aqui no Centro-Sul
-              de Sergipe, somos líder em atendimento, trabalhamos com responsabilidade, credibilidade e satisfação 
+              de Sergipe, somos líder em atendimento, trabalhamos com responsabilidade, credibilidade e satisfação
               levando com todo carinho aos nossos clientes e amigos.</p>
-              <h2>Trabalhamos</h2>
+            <h2>Trabalhamos</h2>
               <li>* Xerox - Impressões</li>
               <li>* Plastificação</li>
               <li>* Encadernação</li>
@@ -53,20 +52,17 @@ const LandPage = () => {
               <li>* Fardamentos</li>
               <li>* Sublimação em Geral</li>
               <li>* Personalizados em Geral</li>
-            </div>
+          </div>
           <div className={styles.sobreImg}>
             <img className={styles.imgPersonalizados} src={img1} alt="Personalizados" />
           </div>
           <div className={styles.sobreImg}>
             <img className={styles.imgPersonalizados} src={img2} alt="Personalizados" />
           </div>
-          <div className={styles.sobreImg}>
-            <img className={styles.imgPersonalizados} src={img3} alt="Personalizados" />
-          </div>
-          
-        </section>
 
+        </section>
       </div>
+    </div>
 
 
   )
