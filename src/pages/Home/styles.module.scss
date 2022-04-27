@@ -7,27 +7,39 @@
 }
  
   .AppLogo {
-   margin-top: 3rem;
+   margin-top: 1rem;
   }
 
-  .h1Bottom {
-    border-top: 0.2rem solid #ffffff;
+  .intraduction{
     h1{
       color: #ffffff;
       font-size: 2.5rem;
+      font-family: Roboto;
       margin: auto;
+      padding: 0.2rem;
+      border-radius: 0.5rem;
       text-align: center;
+      box-shadow: 0rem 0rem 0.6rem 0.3rem;
+    }
+    :hover {
+      background-color: tomato;
     }
   }
 
   .buttonContainer {
     display: flex;
     font-family: Roboto;  
-    font-size: 30px;
+
     justify-content: space-between;
+    padding: 0.5rem 7rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
 
     button{
-      font-size: 1rem;
+      display: grid;
+      font-family: Roboto; 
       cursor: pointer;
       border: none;
       border-radius: 0.4rem;

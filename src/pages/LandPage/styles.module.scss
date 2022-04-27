@@ -58,10 +58,9 @@
   display: inline-block;
 }
 
-  
 .container{
   h1 {
-    font-size: 5.5rem;
+    font-size: 4rem;
     padding: 2.5rem;
     text-align: center;
     background: rgb(238, 237, 237);
@@ -79,7 +78,7 @@
 	flex: 2 1 300px;
 	margin: 0 10px;
   h1 {
-    font-size: 3em;
+    font-size: 3rem;
     margin-bottom: 0.5em;
   }
   p {
@@ -154,24 +153,3 @@
  }
 }
 
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .imgPersonalizados {
-    animation: imgPersonalizados-float infinite 3s ease-in-out;
-  }
-}
-  
-
-
-@keyframes imgPersonalizados-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
-}
