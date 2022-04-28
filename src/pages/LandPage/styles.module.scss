@@ -78,8 +78,14 @@
 	flex: 2 1 300px;
 	margin: 0 10px;
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5em;
+  }
+  li{
+    padding: 0.4rem;
+    .fa{
+      margin-bottom: -0.2rem;
+    }
   }
   p {
     font-size: 1.25em;
@@ -93,6 +99,8 @@
 	flex: 1 1 160px;
 	margin: 0 10px;
 }
+
+
 
 @media (max-width: 720px){
   .conteudo {
