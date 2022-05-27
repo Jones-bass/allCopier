@@ -3,13 +3,13 @@ import { FaChalkboard, FaUserCircle } from 'react-icons/fa';
 
 import { Link } from 'react-router-dom';
 import logoImg from '../../assets/tudo.png';
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 export function Home() {
 
   return (
     <div className={styles.pageHome}>
-      <img className={styles.AppLogo} src={logoImg} alt="LogoInicial" />
+        <img className={styles.AppLogo} src={logoImg} alt="LogoInicial" />
       <div className={styles.intraduction}>
         <h1>Serviços Graficos</h1>
       </div>

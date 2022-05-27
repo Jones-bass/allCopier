@@ -2,7 +2,7 @@ import React from 'react'
 import logoCop from '../../assets/tudo.png';
 import { FaGithub, FaInstagram, FaYoutube, FaFacebookSquare, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 const Footer = () => {
   return (

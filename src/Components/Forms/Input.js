@@ -1,23 +1,23 @@
 import React from 'react';
-import './Input.scss';
+import input from './input.module.css';
 
 const Input = ({ label, type, name, error, value, onChange, onBlur }) => {
   return (
-    <div className='wrapper'>
+    <div className={input.wrapper}>
       <label htmlFor={name} className='label'>
         {label}
       </label>
       <input 
       id={name} 
       name={name} 
-      className='input' 
+      className={input.input} 
       type={type} 
       error={error}
       onChange={onChange}
       value={value}
       onBlur={onBlur}
       />
-      {error && <p className='error'>{error}</p>}
+      {error && <p className={input.error}>{error}</p>}
     </div>
   );
 };

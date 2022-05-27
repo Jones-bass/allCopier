@@ -4,7 +4,7 @@ import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import useForm from '../../Hooks/useForm';
 import { UserContext } from "../../UserContext";
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 
 const LoginForm = () => {
@@ -39,7 +39,7 @@ const LoginForm = () => {
       </Link>
       <div>
         <br />
-        <p>Ainda não possui conta?</p>
+        <p style={{color: 'black'}}>Ainda não possui conta?</p>
         <Link to="/login/criar" className={styles.subtitle}>Cadastre-se
         </Link>
       </div>

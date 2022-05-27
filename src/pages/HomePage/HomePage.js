@@ -5,22 +5,22 @@ import LogoMarca from "../../assets/tudoo.svg";
 import { ReactComponent as Sair } from "../../assets/sair.svg";
 
 import Footer from "../Footer/Footer";
-import styles from './styles.module.scss';
 import LandPage from "../LandPage/LandPage";
+import styles from './styles.module.css';
 
 const HomePage = () => {
   const { data, userLogout } = useContext(UserContext);
 
   return (
     <div>
-      <div className={styles.header}>
-        <Link className={styles.logo} to="/" aria-label="Home">
+      <div className={styles.pageHeader}>
+        <Link className={styles.logoHeader} to="/" aria-label="Home">
           <img src={LogoMarca} alt="LogoMarca" />
         </Link>
         <nav className={styles.headerMenu}>
           <NavLink to="/horarios">Horários</NavLink>
           <NavLink to="/contato">Contato</NavLink>
-          <div className={styles.user}>
+          <div className={styles.loginUser}>
             {data ? (
               <>
                 {data.nome}

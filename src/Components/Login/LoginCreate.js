@@ -5,6 +5,7 @@ import useForm from '../../Hooks/useForm';
 import { USER_POST } from '../../api';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../Hooks/useFetch';
+import styles from './styles.module.css';
 
 const LoginCreate = () => {
   const username = useForm();
@@ -26,7 +27,8 @@ const LoginCreate = () => {
   }
 
   return (
-    <section className="animeLeft">
+    <section className={styles.container}> 
+    <div className={styles.animeLeft}>
       <h1>Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
@@ -39,6 +41,7 @@ const LoginCreate = () => {
         )}
         {error && <p>{error}</p>}
       </form>
+      </div>
     </section>
   );
 };

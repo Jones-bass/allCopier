@@ -10,8 +10,7 @@
    margin-top: 1rem;
   }
 
-  .intraduction{
-    h1{
+  .intraduction h1{
       color: #ffffff;
       font-size: 2.5rem;
       font-family: Roboto;
@@ -21,10 +20,6 @@
       text-align: center;
       box-shadow: 0rem 0rem 0.6rem 0.3rem;
     }
-    :hover {
-      background-color: tomato;
-    }
-  }
 
   .buttonContainer {
     display: flex;
@@ -35,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-
+  }
 
     button{
       display: grid;
@@ -46,10 +41,10 @@
       background: #F46F33;
       padding: 0.8rem 1.2rem;
       box-sizing: border-box;
-    } 
-    button:hover {
-      background-color: red;
-    }
+  }
+
+  button:hover {
+    background-color: red;
   }
 
    .buttonHome:hover,
@@ -72,13 +67,13 @@
   @media (max-width: 720px){
     .pageHome{
       text-decoration: none;
-       h1{
+    }
+    h1{
       font-size: 2.5rem;
       }
-    }
   }
 
-  //logoFlutuando
+ 
 
   @media (prefers-reduced-motion: no-preference) {
     .AppLogo {

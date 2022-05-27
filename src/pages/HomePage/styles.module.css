@@ -1,4 +1,4 @@
-.header {
+.pageHeader {
   background: rgb(238, 237, 237);
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +9,7 @@
   margin-right: auto;
 }
 
-.logo {
+.logoHeader {
   display: flex;
   height: 5rem;
   margin-left: 3rem;
@@ -49,13 +49,13 @@ nav a:hover{
   top: 2px;
 }
 
-.user{
+.loginUser{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.user button {
+.loginUser button {
   align-items: center;
   justify-content: center;
   border-color: tomato;
@@ -64,24 +64,25 @@ nav a:hover{
 }
 
 @media (max-width: 720px){
-  .header{
+  .pageHeader{
     background: rgb(238, 237, 237);
 
   }
-  .logo{
+  .logoHeader{
     display: flex;
     height: 5rem;
     margin: auto;
     margin-top: 0.5rem;
     margin-bottom: -2.5rem;
   }
+  
   .headerMenu{
     display: flex;
     justify-content: space-between;
     margin: auto;
     align-items: center;
   }
-  .user {
+  .loginUser {
     align-items: center;
     justify-content: center;
   }

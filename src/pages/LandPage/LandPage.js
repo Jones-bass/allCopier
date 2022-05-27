@@ -6,10 +6,8 @@ import img1 from '../../assets/img1.jpg';
 import img2 from '../../assets/img2.jpg';
 
 import { FaChevronDown, FaChild, FaLayerGroup } from "react-icons/fa";
-
-
 import Post from './Post';
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 const LandPage = () => {
   return (
@@ -38,7 +36,7 @@ const LandPage = () => {
         />
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.containerPost}>
         <h1><FaChild style={{ marginBottom: '-0.5rem'}}/> SOBRE NÓS</h1>
         <section className={styles.sobre}>
           <div className={styles.sobreInfo}>
@@ -62,7 +60,6 @@ const LandPage = () => {
           <div className={styles.sobreImg}>
             <img className={styles.imgPersonalizados} src={img2} alt="Personalizados" />
           </div>
-
         </section>
       </div>
     </div>
