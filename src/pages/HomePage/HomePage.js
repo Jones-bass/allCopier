@@ -36,7 +36,6 @@ const HomePage = () => {
       <LandPage />
       <Footer />
     </div>
-
   );
 };
 

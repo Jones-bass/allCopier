@@ -73,15 +73,15 @@ span:hover {
 
 @media (max-width: 720px) {
 	.imgFooter {
-		height: 4rem;
+		height: 3.8rem;
 		margin-top: 1rem;
 		margin-left: 0.2rem;
 	}
 
 	.fab {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		margin-right: -0.7rem;
-		margin-top: 0.2rem;
+		margin-top: -0.2rem;
 		margin-bottom: -1rem;
 	}
 

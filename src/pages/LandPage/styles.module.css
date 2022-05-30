@@ -57,6 +57,7 @@
   font-size: 4rem;
   padding: 2.5rem;
   text-align: center;
+  background: rgb(238, 237, 237);
 }
 
 .sobre {
@@ -74,7 +75,16 @@
 
 .sobreInfo h1 {
   font-size: 2.5rem;
+  background: rgb(238, 237, 237);
   margin-bottom: 0.5em;
+}
+
+.sobreInfo h2 {
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: black;
+  background: rgb(238, 237, 237);
 }
 
 li {
@@ -144,23 +154,26 @@ li {
   .sobreInfo h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    background-color: tomato;
+    color: white;
+
   }
 
   .sobreInfo h2 {
-    background: rgb(238, 237, 237);
     padding: 0.5rem;
     text-align: center;
+    background-color: tomato;
+    color: white;
   }
 
   .sobreInfo li {
-    background: rgb(238, 237, 237);
     padding: 0.1rem;
+
   }
 
   .sobreInfo p {
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 1em;
-    color: #080808;
   }
 }
