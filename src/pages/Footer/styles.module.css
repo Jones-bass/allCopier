@@ -79,7 +79,7 @@ span:hover {
 	}
 
 	.fab {
-		font-size: 1.2rem;
+		font-size: 1rem;
 		margin-right: -0.7rem;
 		margin-top: -0.2rem;
 		margin-bottom: -1rem;
@@ -97,6 +97,6 @@ span:hover {
 	}
 
 	.footerBox span {
-		font-size: 1rem;
+		font-size: 0.9rem;
 	}
 }

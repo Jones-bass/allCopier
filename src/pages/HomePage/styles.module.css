@@ -30,6 +30,7 @@
   text-decoration: none;
   color: #141414;
   display: block;
+  cursor: pointer;
 }
 
 nav a:hover{
