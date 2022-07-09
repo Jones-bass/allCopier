@@ -64,6 +64,22 @@ nav a:hover{
   margin-left: 5px;
 }
 
+.containerContatcs {
+  padding: 2rem;
+}
+
+.containerContatcs > h1 {
+  font-size: 3rem;
+  padding: 1.5rem;
+  text-align: left;
+  background: rgb(238, 237, 237);}
+
+.containerContatcs > p {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
 @media (max-width: 720px){
   .pageHeader{
     background: rgb(238, 237, 237);
@@ -72,17 +88,11 @@ nav a:hover{
   .logoHeader{
     display: flex;
     height: 5rem;
-    margin: auto;
     margin-top: 0.2rem;
+    margin-left: 0.5rem;
     margin-bottom: 0.5rem;
   }
   
-  .headerMenu{
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    align-items: center;
-  }
   .loginUser {
     align-items: center;
     justify-content: center;

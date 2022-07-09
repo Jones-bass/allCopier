@@ -29,12 +29,13 @@
 }
 
 .button {
+  width: 9rem;
+  height: 2.5rem;
   display: flex;
   justify-content: space-between;
   gap: 0.2rem;
   background: tomato;
   color: aliceblue;
-  padding: 1rem 2rem;
   border-radius: 0.3rem;
   text-decoration: none;
   font-weight: bold;
