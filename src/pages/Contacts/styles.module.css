@@ -87,9 +87,9 @@ nav a:hover{
   }
   .logoHeader{
     display: flex;
-    height: 5rem;
+    height: 3rem;
     margin-top: 0.2rem;
-    margin-left: 0.5rem;
+    margin-left: 2rem;
     margin-bottom: 0.5rem;
   }
   
@@ -100,6 +100,14 @@ nav a:hover{
   nav a:hover{
     background-color: tomato;
     color: rgb(243, 241, 241);
+  }
+
+  .containerContatcs h1 {
+    font-size: 22px;
+  }
+
+  .containerContatcs p {
+    font-size: 14px;
   }
 }
 

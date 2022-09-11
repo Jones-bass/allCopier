@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Caneca Personalizada",
+      "text": "Criamos sua caneca também! e vamos presentear aquela pessoal ESPECIAL.",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_858781-MLB31777794699_082019-O.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Camiseta Personalizada",
+      "text": "Criamos sua caneca também! e vamos presentear aquela pessoal ESPECIAL.",
+      "image": "https://img.elo7.com.br/product/zoom/2970630/30-camisetas-personalizada-todos-os-temas-camisa-festa-aniv-sublimacao.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Almofada Personalizada",
+      "text": "Criamos sua caneca também! e vamos presentear aquela pessoal ESPECIAL.",
+      "image": "https://images.tcdn.com.br/img/img_prod/650501/almofada_personalizada_mickey_tradicional_20x30_f_e_v_101_1_20211227090444.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Azulejo Personalizada",
+      "text": "Criamos sua caneca também! e vamos presentear aquela pessoal ESPECIAL.",
+      "image": "https://cdn.awsli.com.br/1000x1000/1221/1221152/produto/97497177/f9c9f6a79b.jpg"
+    }
+  ]
+}
