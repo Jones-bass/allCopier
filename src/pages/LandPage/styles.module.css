@@ -5,14 +5,20 @@
   box-sizing: border-box;
   max-width: 85.7rem;
   padding: 3rem;
+
 }
 
 .containerText {
-  padding: 2.5rem;
+  height: 350px;
+  padding: 1rem;
   text-align: right;
   display: grid;
   gap: 1rem;
   justify-items: end;
+}
+
+.containerText > h2 {
+  color: black;
 }
 
 .text {
@@ -25,7 +31,6 @@
 .title {
   text-align: center;
   font-size: 3.5rem;
-  padding: 1rem;
 }
 
 .containerText > button {
@@ -46,8 +51,10 @@
 }
 
 .imgPersonalizados {
-  height: 100%;
-  object-fit: cover;
+ width: 850px;
+ height: 350px;
+ max-width: 100%;
+ object-fit: cover;
 }
 
 .detalhe {
@@ -58,7 +65,7 @@
 }
 
 .containerPost h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 2.5rem;
   text-align: center;
   background: rgb(238, 237, 237);
@@ -67,7 +74,7 @@
 .sobre {
   border-top: 0.5rem solid tomato;
   max-width: 85.7rem;
-  padding: 4.4rem;
+  padding: 4rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -78,13 +85,13 @@
 }
 
 .sobreInfo h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: rgb(238, 237, 237);
   margin-bottom: 0.5em;
 }
 
 .sobreInfo h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 1.5rem;
   text-align: center;
   color: black;
@@ -95,8 +102,9 @@ li {
   padding: 0.4rem;
 }
 
-.fa {
+.iconsService {
   margin-bottom: -0.2rem;
+  padding: 0.1rem;
 }
 
 .sobreInfo p {
@@ -116,13 +124,15 @@ li {
 
 @media (max-width: 720px) {
   .containerConteudo {
-    display: inline;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column-reverse;
+
     margin: 0;
   }
 
   .containerText {
     gap: 0.2rem;
+
   }
 
   .containerText p {

@@ -1,14 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { UserStorage } from "./UserContext";
+import { Provider } from 'react-redux';
+import Contacts from "./pages/Contacts/Contacts";
+
 import { Home } from "./pages/Home/Home";
+
 import HomePage from "./pages/HomePage/HomePage";
 import Login from "./Components/Login/Login";
-import { UserStorage } from "./UserContext";
+import store from './store';
 import './App.css';
-import Contacts from "./pages/Contacts/Contacts";
 
 function App() {
   return (
     <div>
+     <Provider store={store}>
       <BrowserRouter>
       <UserStorage>
         <Routes>
@@ -19,6 +25,7 @@ function App() {
         </Routes>
         </UserStorage>
       </BrowserRouter>
+      </Provider>
     </div>
   );
 }

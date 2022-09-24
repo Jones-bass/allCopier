@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg";
 
-import { FaChevronDown, FaChild, FaLayerGroup, FaProductHunt } from "react-icons/fa";
-
+import {
+  FaChevronDown,
+  FaChild,
+  FaLayerGroup,
+  FaProductHunt,
+} from "react-icons/fa";
 import styles from "./styles.module.css";
 
 const icons = [
@@ -35,39 +40,28 @@ const icons = [
 ];
 
 const LandPage = () => {
-  const [posts, setPosts] = useState([]);
-
-  async function loadPosts() {
-    const response = await fetch("http://localhost:3333/posts");
-    const data = await response.json();
-
-    setPosts(data);
-  }
-
-  useEffect(() => {
-    loadPosts();
-  }, []);
-
+  const products = useSelector(state => state.products)
+  
   return (
     <div>
-      <div>
-        {posts.map((post, index) => (
+       <div>
+        {products.map((item, index) => (
           <div key={index}>
             <div className={styles.containerConteudo}>
               <div className={styles.containerText}>
                 <span className={styles.detalhe}></span>
-                <h1 className={styles.title}>{post.title}</h1>
-                <p className={styles.text}>{post.text}</p>
+                <h1 className={styles.title}>{item.title}</h1>
+                <p className={styles.text}>{item.text}</p>
+                <h2>R$ {item.price.toFixed(2)}</h2>
                 <button>
-                  <FaProductHunt 
-                  />
+                  <FaProductHunt />
                   PERSONALIZE!
                 </button>
               </div>
               <img
                 className={styles.imgPersonalizados}
-                src={post.image}
-                alt="Personalizados"
+                src={item.image}
+                alt={item.title}
               />
             </div>
           </div>
@@ -93,12 +87,12 @@ const LandPage = () => {
             <h2>Trabalhamos</h2>
             {icons.map((icon, index) => (
               <li key={index}>
-                <FaChevronDown className={styles.fa} />
+                <FaChevronDown className={styles.iconsService} />
                 {icon.text}
               </li>
             ))}
           </div>
-        
+
           <div className={styles.sobreImg}>
             <img
               className={styles.imgPersonalizados}
@@ -119,4 +113,6 @@ const LandPage = () => {
   );
 };
 
-export default LandPage;
+
+
+export default (LandPage);
