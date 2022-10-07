@@ -1,5 +1,6 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import cartActions from '../../store/actions/cart';
 
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg";
@@ -40,11 +41,15 @@ const icons = [
 ];
 
 const LandPage = () => {
-  const products = useSelector(state => state.products)
-  
+  const products = useSelector((state) => state.products);
+  const cart = useSelector((state) => state.carrinho.value);
+  const dispatch = useDispatch();
+
+  console.log(cartActions);
+
   return (
     <div>
-       <div>
+      <div>
         {products.map((item, index) => (
           <div key={index}>
             <div className={styles.containerConteudo}>
@@ -53,9 +58,9 @@ const LandPage = () => {
                 <h1 className={styles.title}>{item.title}</h1>
                 <p className={styles.text}>{item.text}</p>
                 <h2>R$ {item.price.toFixed(2)}</h2>
-                <button>
+                <button onClick={() => dispatch(cartActions.Add(cart))}>
                   <FaProductHunt />
-                  PERSONALIZE!
+                  Adicione!
                 </button>
               </div>
               <img
@@ -113,6 +118,4 @@ const LandPage = () => {
   );
 };
 
-
-
-export default (LandPage);
+export default LandPage;
