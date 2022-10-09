@@ -4,10 +4,12 @@ import { UserContext } from "../../UserContext";
 import LogoMarca from "../../assets/tudoo.svg";
 import { ReactComponent as Sair } from "../../assets/sair.svg";
 
+import { useSelector } from "react-redux";
 import Footer from "../Footer/Footer";
 import LandPage from "../LandPage/LandPage";
+
+import { FaCartArrowDown } from "react-icons/fa";
 import styles from './styles.module.css';
-import { useSelector } from "react-redux";
 
 const HomePage = () => {
   const { data, userLogout } = useContext(UserContext);
@@ -23,7 +25,7 @@ const HomePage = () => {
         </Link>
         <nav className={styles.headerMenu}>
           
-        <button>Carrinho {cart.value}</button>
+        <Link to="/carDetail" aria-label="carDetail">{cart.value}<FaCartArrowDown size={24}/></Link>
 
         <Link to="/contacts">Contatos</Link>
           <div className={styles.loginUser}>
