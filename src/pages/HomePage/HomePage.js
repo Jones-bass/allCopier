@@ -25,7 +25,7 @@ const HomePage = () => {
         </Link>
         <nav className={styles.headerMenu}>
           
-        <Link to="/carDetail" aria-label="carDetail">{cart.value}<FaCartArrowDown size={24}/></Link>
+        <Link to="/cartdetail" aria-label="cartdetail">{cart.value}<FaCartArrowDown size={24}/></Link>
 
         <Link to="/contacts">Contatos</Link>
           <div className={styles.loginUser}>
