@@ -101,7 +101,7 @@ button {
 @media (max-width: 720px){
   .logoHeader{
     display: flex;
-    height: 3rem;
+    height: 2.9rem;
     margin-top: 0.2rem;
     margin-left: 2rem;
     margin-bottom: 0.5rem;

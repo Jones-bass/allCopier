@@ -93,7 +93,7 @@ const LandPage = () => {
             <h2>Trabalhamos</h2>
             {textIcons.map((item, index) => (
               <li key={index} className={styles.iconsService}>
-                <BiSelectMultiple  marginBottom='20px' color='#01FF5F'/>
+                <BiSelectMultiple  color='tomato'/>
                 {' '}{item}
               </li>
             ))}

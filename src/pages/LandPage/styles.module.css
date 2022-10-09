@@ -103,6 +103,7 @@ li {
 
 .iconsService {
   padding: 0.5rem;
+  margin-top: 1rem;
 }
 
 .sobreInfo p {
@@ -124,7 +125,6 @@ li {
   .containerConteudo {
     display: flex;
     flex-direction: column-reverse;
-
     margin: 0;
   }
 
