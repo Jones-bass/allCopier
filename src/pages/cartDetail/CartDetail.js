@@ -6,9 +6,13 @@ import { ReactComponent as Sair } from "../../assets/sair.svg";
 import almofada from "../../assets/almofada.jpg";
 
 import styles from "./styles.module.css";
+import { useSelector } from "react-redux";
 
 const CartDetail = () => {
   const { data, userLogout } = useContext(UserContext);
+  const  cart  = useSelector((state) => state.cardCart)
+
+  console.log(cart)
 
   return (
     <div>
@@ -63,7 +67,7 @@ const CartDetail = () => {
                       alt="almofada"
                     />
                   </th>
-                  <th>2</th>
+                  <th>{cart.value}</th>
                   <th>R$ 100.00</th>
                   <th>
                     <button> + </button>
@@ -77,7 +81,7 @@ const CartDetail = () => {
                   <th></th>
                   <th></th>
                   <th></th>
-                  <th>2 itens</th>
+                  <th>{cart.value} itens</th>
                   <th></th>
                   <th></th>
                   <th>R$ 200.00</th>

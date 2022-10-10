@@ -1,18 +1,15 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import cartActions from "../../store/actions/cart";
-import { useKeenSlider } from "keen-slider/react";
+import CardProducts from "../../Components/CardProducts/CardProducts";
 
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg";
 
-import "keen-slider/keen-slider.min.css";
-
 import { FaChild, FaLayerGroup } from "react-icons/fa";
-import {BiSelectMultiple} from "react-icons/bi"
-import { MdOutlineAddShoppingCart } from "react-icons/md"
+import { BiSelectMultiple } from "react-icons/bi"
 
+import "keen-slider/keen-slider.min.css";
 import styles from "./styles.module.css";
+import { useSelector } from "react-redux";
 
 const textIcons = [
   "Xerox - Impressões",
@@ -26,53 +23,19 @@ const textIcons = [
 ];
 
 const LandPage = () => {
-  const products = useSelector((state) => state.products);
-  const cart = useSelector((state) => state.carrinho.value);
-  const [sliderRef] = useKeenSlider({
-    slides: {
-      perView: 1,
-      spacing: 28,
-    },
-  });
-
-  const dispatch = useDispatch();
-
-  console.log(cartActions);
-
+  const products = useSelector(state => state.productsList)
+  
   return (
-      <div>
-        {products.map((item, index) => (
-          <div key={index}>
-            <div className={styles.containerConteudo}>
-              <div className={styles.containerText}>
-                <span className={styles.detalhe}></span>
-                <h1 className={styles.title}>{item.title}</h1>
-                <p className={styles.text}>{item.text}</p>
-                <h2>R$ {item.price.toFixed(2)}</h2>
-                <button onClick={() => dispatch(cartActions.Add(cart))}>
-                  <MdOutlineAddShoppingCart size={16}/>
-                  Compre Agora
-                </button>
-              </div>
-
-              <div ref={sliderRef} className="keen-slider">
-                <li className="keen-slider__slide">
-                  <img className={styles.imgPersonalizados}
-                    src={item.image[0]}
-                    alt={item.title}
-                  />
-                </li>
-                <li className="keen-slider__slide">
-                  <img className={styles.imgPersonalizados}
-                    src={item.image[1]}
-                    alt={item.title}
-                  />
-                </li>
-              </div>
-            </div>
-          </div>
-        ))}
-      
+    <div>
+      {products.map(item => {
+        return (
+          <CardProducts 
+            key={item.id_product}
+            id={item.id_product}
+            product={item}
+          />
+        )
+      })}
 
       <div className={styles.containerPost}>
         <h1>
@@ -93,7 +56,7 @@ const LandPage = () => {
             <h2>Trabalhamos</h2>
             {textIcons.map((item, index) => (
               <li key={index} className={styles.iconsService}>
-                <BiSelectMultiple  color='tomato'/>
+                <BiSelectMultiple color='tomato' />
                 {' '}{item}
               </li>
             ))}

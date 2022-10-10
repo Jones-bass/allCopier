@@ -1,0 +1,116 @@
+.pageHome {
+  display: grid;
+  color: #fff;
+  height: 100vh;
+  justify-content: center;
+  background: url('../../assets/laranja.jpg') no-repeat center center;
+}
+ 
+  .AppLogo {
+   margin-top: 1rem;
+  }
+
+  .intraduction h1{
+      color: #ffffff;
+      font-size: 2.5rem;
+      font-family: Roboto;
+      margin: auto;
+      padding: 0.2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0rem 0rem 0.6rem 0.3rem;
+    }
+
+  .buttonContainer {
+    display: flex;
+    font-family: Roboto;  
+
+    justify-content: space-between;
+    padding: 0.5rem 7rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+    button{
+      display: grid;
+      font-family: Roboto; 
+      cursor: pointer;
+      border: none;
+      border-radius: 0.4rem;
+      background: #F46F33;
+      padding: 0.8rem 1.2rem;
+      box-sizing: border-box;
+  }
+
+  button:hover {
+    background-color: red;
+  }
+
+   .buttonHome:hover,
+  .buttonHome:focus {
+    outline: none;
+    background-color: #F89531;
+    box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+  }
+
+ 
+
+  @media (max-width: 720px){
+    .AppLogo{
+      width: 22rem;
+      height: 14rem;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 720px){
+    .pageHome{
+      text-decoration: none;
+    }
+    h1{
+      font-size: 2.5rem;
+      }
+  }
+
+ 
+
+  @media (prefers-reduced-motion: no-preference) {
+    .AppLogo {
+      animation: AppLogo-float infinite 3s ease-in-out;
+    }
+  }
+    
+  @keyframes AppLogo-float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(5px)
+    }
+    100% {
+      transform: translateY(0px)
+    }
+  }
+
+
+  @media (max-width: 720px){
+    @media (prefers-reduced-motion: no-preference) {
+      .AppLogo {
+        animation: AppLogo-float infinite 3s ease-in-out;
+      }
+    }
+      
+    @keyframes AppLogo-float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px)
+      }
+      100% {
+        transform: translateY(0px)
+      }
+    } 
+   }
+

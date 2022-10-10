@@ -1,32 +1,53 @@
-import React from 'react';
-import { FaChalkboard, FaUserCircle } from 'react-icons/fa';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../UserContext";
+import { useSelector } from "react-redux";
 
-import { Link } from 'react-router-dom';
-import logoImg from '../../assets/tudo.png';
+import Footer from "../../Components/Footer/Footer";
+import LandPage from "../LandPage/LandPage";
+
+import { FaCartArrowDown } from "react-icons/fa";
+import LogoMarca from "../../assets/tudoo.svg";
+
+import { ReactComponent as Sair } from "../../assets/sair.svg";
+
 import styles from './styles.module.css';
 
 export function Home() {
+  const { data, userLogout } = useContext(UserContext);
+
+  const cart = useSelector(state => state.cardCart)
+  console.log(cart)
 
   return (
-    <div className={styles.pageHome}>
-        <img className={styles.AppLogo} src={logoImg} alt="LogoInicial" />
-      <div className={styles.intraduction}>
-        <h1>Serviços Graficos</h1>
-      </div>
+    <div>
+      <div className={styles.pageHeader}>
+        <Link className={styles.logoHeader} to="/" aria-label="Home">
+          <img src={LogoMarca} alt="LogoMarca" />
+        </Link>
+        <nav className={styles.headerMenu}>
+          
+        <Link to="/cartdetail" aria-label="cartdetail">{cart.value}<FaCartArrowDown size={24}/></Link>
 
-      <div>
-        <div className={styles.buttonContainer}>
-          <button >
-            <Link style={{ color: "white", fontSize: '1.5rem'}} to="/home">
-              <FaChalkboard  style={{ marginBottom: '-0.2rem', marginRight: '1rem'}}/>
-              Visitar</Link>
-          </button>
-          <button >
-            <Link style={{ color: "white", fontSize: '1.5rem'}} to="/login">
-              <FaUserCircle style={{ marginBottom: '-0.2rem', marginRight: '1rem'}}/>Logar</Link>
-          </button>
-        </div>
+        <Link to="/contacts">Contatos</Link>
+          <div className={styles.loginUser}>
+            {data ? (
+              <>
+                {data.nome}
+                <button onClick={userLogout}><Sair /></button>
+              </>
+            ) : (
+              <Link className={styles.login} to="/login">Login
+              </Link>
+              
+            )}
+          </div>
+        </nav>
       </div>
+      <LandPage />
+      <Footer />
     </div>
-  )
-}
+  );
+};
+
+

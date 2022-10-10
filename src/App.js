@@ -4,9 +4,9 @@ import { UserStorage } from "./UserContext";
 import { Provider } from "react-redux";
 import Contacts from "./pages/Contacts/Contacts";
 
+import { HomeScreen } from "./Components/HomeScreen/HomeScreen";
 import { Home } from "./pages/Home/Home";
 
-import HomePage from "./pages/HomePage/HomePage";
 import Login from "./Components/Login/Login";
 import CartDetail from "./pages/cartDetail/CartDetail";
 
@@ -20,9 +20,9 @@ function App() {
         <BrowserRouter>
           <UserStorage>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<HomeScreen />} />
               <Route path="/login/*" element={<Login />} />
-              <Route path="/home/" element={<HomePage />} />
+              <Route path="/home/" element={<Home/>} />
               <Route path="/contacts/" element={<Contacts />} />
               <Route path="/cartdetail/" element={<CartDetail />} />
             </Routes>

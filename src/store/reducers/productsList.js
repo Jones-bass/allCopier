@@ -113,6 +113,6 @@ const PRODUCT = [
   },
 ];
 
-export default function products(state = PRODUCT){
+export default function productsList(state = PRODUCT){
   return state;
 }
