@@ -21,8 +21,6 @@ const CardProducts = ({product}) => {
 
   const dispatch = useDispatch();
 
-  console.log(cartActions);
-
   return (
       <div>
           <div>
@@ -34,7 +32,7 @@ const CardProducts = ({product}) => {
                 <h2>R$ {product.price.toFixed(2)}</h2>
                 
                 <button 
-                  onClick={() => dispatch(cartActions.Add(cart))}>
+                  onClick={() => dispatch(cartActions.Add(cart, product))}>
                   <MdOutlineAddShoppingCart size={16}/>
                   Compre Agora
                 </button>

@@ -1,18 +1,39 @@
-import productsList from "./productsList";
+import productsList from "./product";
 
 const INITIAL_STATE = {
   value: 0,
-  productsList,
+  products: productsList,
   Cart: []
 };
 
 export default function cardCart(state = INITIAL_STATE, action) {
   if (action.type === "ADD_TO_CART") {
-    console.log(state.productsList)
+    if(state.value === 0 ) {
+     let item = {
+      id: action.product.id_product,
+      text: action.product.text,
+      price: action.product.price,
+      title: action.product.title,
+      image: action.product.image,
+      quantity: 1
+    }
+    state.Cart.push(item);
+  } else {
+    let check = false;
+    state.Cart.map((item, key) => {
+      if(item.id === action.product.id_product) {
+        state.Cart[key].quantity ++;
+        check = true;
+      }
+    })
+  }
+
+    
     return {
       ...state,
-      value: state.value + 1,
+      value: (state.value + 1)
     };
   }
+
   return state;
 }

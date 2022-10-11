@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import cardCart from './cardCart';
 
-import productsList from './productsList';
+import products from './products';
 
 export default combineReducers({
-    productsList,
+    products,
     cardCart
 })

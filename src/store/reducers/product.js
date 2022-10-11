@@ -1,4 +1,4 @@
-const PRODUCT = [
+const produtcList = [
   {
     id_product: 1,
     category_name: "Caneca",
@@ -113,6 +113,4 @@ const PRODUCT = [
   },
 ];
 
-export default function productsList(state = PRODUCT){
-  return state;
-}
+export default produtcList;

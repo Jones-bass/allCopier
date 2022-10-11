@@ -10,9 +10,9 @@ import { useSelector } from "react-redux";
 
 const CartDetail = () => {
   const { data, userLogout } = useContext(UserContext);
-  const  cart  = useSelector((state) => state.cardCart)
+  const cart = useSelector((state) => state.cardCart)
 
-  console.log(cart)
+  const Cart = useSelector((state) => state.Cart)
 
   return (
     <div>
@@ -56,36 +56,42 @@ const CartDetail = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th>
-                    <button>X</button>
-                  </th>
-                  <th>
-                    <img
-                      className={styles.photoCar}
-                      src={almofada}
-                      alt="almofada"
-                    />
-                  </th>
-                  <th>{cart.value}</th>
-                  <th>R$ 100.00</th>
-                  <th>
-                    <button> + </button>
-                  </th>
-                  <th>
-                    <button> - </button>
-                  </th>
-                  <th>R$ 200.00</th>
-                </tr>
-                <tr>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th>{cart.value} itens</th>
-                  <th></th>
-                  <th></th>
-                  <th>R$ 200.00</th>
-                </tr>
+
+                  {cart.Cart.map(item => {
+                    return (
+                      <tr>
+                        <th>
+                          <button>X</button>
+                        </th>
+                        <th>
+                          <img
+                            className={styles.photoCar}
+                            src={item.image[0]}
+                            alt="almofada"
+                          />
+                        </th>
+                        <th>{cart.value}</th>
+                        <th>R$ {item.price.toFixed(2)}</th>
+                        <th>
+                          <button> + </button>
+                        </th>
+                        <th>
+                          <button> - </button>
+                        </th>
+                        <th>R$ {item.price.toFixed(2)}</th>
+                      </tr>
+                    )
+                  })}
+
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>{cart.value} itens</th>
+                    <th></th>
+                    <th></th>
+                    <th>R$ 200.00</th>
+                  </tr>
               </tbody>
             </table>
           </div>

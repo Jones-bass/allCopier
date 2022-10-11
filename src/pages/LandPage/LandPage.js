@@ -23,7 +23,7 @@ const textIcons = [
 ];
 
 const LandPage = () => {
-  const products = useSelector(state => state.productsList)
+  const products = useSelector(state => state.products)
   
   return (
     <div>
