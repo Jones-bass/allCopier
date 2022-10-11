@@ -70,7 +70,7 @@ const CartDetail = () => {
                             alt="almofada"
                           />
                         </th>
-                        <th>{cart.value}</th>
+                        <th>{item.quantity}</th>
                         <th>R$ {item.price.toFixed(2)}</th>
                         <th>
                           <button> + </button>
@@ -78,7 +78,7 @@ const CartDetail = () => {
                         <th>
                           <button> - </button>
                         </th>
-                        <th>R$ {item.price.toFixed(2)}</th>
+                        <th>R$ {(item.price * item.quantity).toFixed(2)}</th>
                       </tr>
                     )
                   })}
