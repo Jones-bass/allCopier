@@ -13,7 +13,7 @@ const Contacts = () => {
   const { data, userLogout } = useContext(UserContext);
 
   return (
-    <div>
+    <div className={styles.animeLeft}>
       <div className={styles.pageHeader}>
         <Link className={styles.logoHeader} to="/home" aria-label="Home">
           <img src={LogoMarca} alt="LogoMarca" />

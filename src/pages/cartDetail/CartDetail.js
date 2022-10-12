@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import cartActions from '../../store/actions/cart'
+
 import { UserContext } from "../../UserContext";
 import LogoMarca from "../../assets/tudoo.svg";
 import { ReactComponent as Sair } from "../../assets/sair.svg";
-import almofada from "../../assets/almofada.jpg";
 
 import styles from "./styles.module.css";
-import { useSelector } from "react-redux";
 
 const CartDetail = () => {
   const { data, userLogout } = useContext(UserContext);
   const cart = useSelector((state) => state.cardCart)
-
-  const Cart = useSelector((state) => state.Cart)
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -38,7 +38,7 @@ const CartDetail = () => {
         </nav>
       </div>
 
-      <div>
+      <div className={styles.animeLeft}>
         <div className={styles.containerProducts}>
           <h1>Produtos no Carrinho</h1>
 
@@ -59,9 +59,9 @@ const CartDetail = () => {
 
                   {cart.Cart.map(item => {
                     return (
-                      <tr>
+                      <tr key={item.id}>
                         <th>
-                          <button>X</button>
+                          <button className={styles.buttonCar}>X</button>
                         </th>
                         <th>
                           <img
@@ -73,10 +73,11 @@ const CartDetail = () => {
                         <th>{item.quantity}</th>
                         <th>R$ {item.price.toFixed(2)}</th>
                         <th>
-                          <button> + </button>
+                          <button onClick={() => dispatch(cartActions.AddItem(cart, item))} 
+                            className={styles.buttonCar}> + </button>
                         </th>
                         <th>
-                          <button> - </button>
+                          <button className={styles.buttonCar}> - </button>
                         </th>
                         <th>R$ {(item.price * item.quantity).toFixed(2)}</th>
                       </tr>

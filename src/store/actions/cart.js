@@ -6,6 +6,15 @@ const Add = (cart, product) => {
   }
 }
 
+const AddItem = (cart, product) => {
+  return{
+      type: 'ADD_ITEM',
+      cart,
+      product
+  }
+}
+
 export default {
-  Add
+  Add,
+  AddItem
 }

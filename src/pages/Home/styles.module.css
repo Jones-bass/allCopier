@@ -67,8 +67,8 @@ nav a:hover{
 @media (max-width: 720px){
   .pageHeader{
     background: rgb(238, 237, 237);
-
   }
+
   .logoHeader{
     display: flex;
     height: 2.5rem;
@@ -79,14 +79,17 @@ nav a:hover{
   
   .headerMenu{
     display: flex;
+    gap: 0px;
     justify-content: space-between;
     margin: auto;
     align-items: center;
   }
+
   .loginUser {
     align-items: center;
     justify-content: center;
   }
+
   nav a:hover{
     background-color: tomato;
     color: rgb(243, 241, 241);

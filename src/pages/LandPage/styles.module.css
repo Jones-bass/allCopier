@@ -113,13 +113,10 @@ li {
   color: #080808;
 }
 
-
 .sobreImg {
   flex: 1 1 160px;
   margin: 0 10px;
 }
-
-
 
 @media (max-width: 720px) {
   .containerConteudo {
@@ -130,7 +127,6 @@ li {
 
   .containerText {
     gap: 0.2rem;
-
   }
 
   .containerText p {
