@@ -1,67 +1,3 @@
-.containerConteudo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0rem 2.8rem;
-  box-sizing: border-box;
-  max-width: 85.7rem;
-  padding: 3rem;
-}
-
-.containerText {
-  height: 350px;
-  padding: 1rem;
-  text-align: right;
-  display: grid;
-  gap: 1rem;
-  justify-items: end;
-}
-
-.containerText > h2 {
-  color: black;
-}
-
-.text {
-  text-align: center;
-  font-size: 1.5rem;
-  text-align: end;
-  color: black;
-}
-
-.title {
-  text-align: center;
-  font-size: 3.5rem;
-}
-
-.containerText > button {
-  display: flex;
-  width: 9rem;
-  height: 2.5rem;
-
-  gap: 0.1rem;
-  
-  background: tomato;
-  color: aliceblue;
-  
-  border-radius: 0.4rem;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.imgPersonalizados {
- width: 850px;
- height: 350px;
- max-width: 100%;
- object-fit: contain;
-}
-
-.detalhe {
-  width: 4.2rem;
-  height: 0.4rem;
-  background: tomato;
-  display: inline-block;
-}
 
 .containerPost h1 {
   font-size: 3rem;
@@ -71,7 +7,6 @@
 }
 
 .sobre {
-  border-top: 0.5rem solid tomato;
   max-width: 85.7rem;
   padding: 4rem;
   display: flex;

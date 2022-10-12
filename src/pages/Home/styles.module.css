@@ -85,14 +85,9 @@ nav a:hover{
     align-items: center;
   }
 
-  .loginUser {
-    align-items: center;
-    justify-content: center;
-  }
-
-  nav a:hover{
-    background-color: tomato;
-    color: rgb(243, 241, 241);
+  .headerMenu a {
+    font-size: 1rem;
+    padding: 35px 15px;
   }
 }
 

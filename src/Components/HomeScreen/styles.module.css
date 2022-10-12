@@ -1,116 +1,127 @@
 .pageHome {
-  display: grid;
-  color: #fff;
   height: 100vh;
+  
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  
   background: url('../../assets/laranja.jpg') no-repeat center center;
 }
  
-  .AppLogo {
-   margin-top: 1rem;
+.AppLogo {
+  display: flex;
+  padding-top: 2.5rem;
+  margin: auto;
+}
+
+.introduction h1{
+  display: grid;
+  width: 20rem;
+  height: 3rem;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 5rem;
+  
+  color: #ffffff;
+  background: rgb(245, 54, 20);
+  font-size: 1.5rem;
+  font-family: 'Roboto';
+
+  border-radius: 0.4rem;
+  box-shadow: 0rem 0rem 0.1rem 0.1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  padding: 0.5rem 7rem;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.buttonContainer > button{
+  width: 12rem;
+  height: 3rem;
+  font-family: 'Roboto'; 
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 10px;
+}
+
+@media (max-width: 720px){
+  .introduction {
+    margin-top: 6rem;
   }
 
-  .intraduction h1{
-      color: #ffffff;
-      font-size: 2.5rem;
-      font-family: Roboto;
-      margin: auto;
-      padding: 0.2rem;
-      border-radius: 0.5rem;
-      text-align: center;
-      box-shadow: 0rem 0rem 0.6rem 0.3rem;
-    }
+  .introduction h1{
+    width: 15rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
 
   .buttonContainer {
-    display: flex;
-    font-family: Roboto;  
-
-    justify-content: space-between;
-    padding: 0.5rem 7rem;
+    margin-top: 2rem;
     flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
   }
 
-    button{
-      display: grid;
-      font-family: Roboto; 
-      cursor: pointer;
-      border: none;
-      border-radius: 0.4rem;
-      background: #F46F33;
-      padding: 0.8rem 1.2rem;
-      box-sizing: border-box;
+  .buttonContainer > button{
+    margin-bottom: 0;
+    width: 10rem;
+    height: 3rem;
   }
+}
 
-  button:hover {
-    background-color: red;
+@media (prefers-reduced-motion: no-preference) {
+  .AppLogo {
+    animation: AppLogo-float infinite 3s ease-in-out;
   }
-
-   .buttonHome:hover,
-  .buttonHome:focus {
-    outline: none;
-    background-color: #F89531;
-    box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+}
+  
+@keyframes AppLogo-float {
+  0% {
+    transform: translateY(0);
   }
-
- 
-
-  @media (max-width: 720px){
-    .AppLogo{
-      width: 22rem;
-      height: 14rem;
-      margin: auto;
-    }
+  50% {
+    transform: translateY(5px)
   }
-
-  @media (max-width: 720px){
-    .pageHome{
-      text-decoration: none;
-    }
-    h1{
-      font-size: 2.5rem;
-      }
+  100% {
+    transform: translateY(0px)
   }
+}
 
- 
-
+@media (max-width: 720px){
   @media (prefers-reduced-motion: no-preference) {
     .AppLogo {
       animation: AppLogo-float infinite 3s ease-in-out;
+     
+      display: flex;
+      width: 20rem;
+      height: 20rem;
+  
+      padding-top: 10rem;
+      margin: auto;
     }
   }
     
-  @keyframes AppLogo-float {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(5px)
-    }
-    100% {
-      transform: translateY(0px)
-    }
+@keyframes AppLogo-float {
+  0% {
+    transform: translateY(0);
   }
-
-
-  @media (max-width: 720px){
-    @media (prefers-reduced-motion: no-preference) {
-      .AppLogo {
-        animation: AppLogo-float infinite 3s ease-in-out;
-      }
-    }
-      
-    @keyframes AppLogo-float {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(5px)
-      }
-      100% {
-        transform: translateY(0px)
-      }
-    } 
+  50% {
+    transform: translateY(5px)
+  }
+  100% {
+    transform: translateY(0px)
    }
+  } 
+}
 

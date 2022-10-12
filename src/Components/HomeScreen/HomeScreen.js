@@ -9,7 +9,7 @@ export function HomeScreen() {
   return (
     <div className={styles.pageHome}>
         <img className={styles.AppLogo} src={logoImg} alt="LogoInicial" />
-      <div className={styles.intraduction}>
+      <div className={styles.introduction}>
         <h1>Serviços Graficos</h1>
       </div>
 

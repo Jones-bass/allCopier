@@ -26,7 +26,7 @@
 .subtitle::after {
   content: '';
   display: block;
-  background: tomato;
+  background: linear-gradient(180deg, #F46F33 10%, #f31095 100%);
   height: 0.5rem;
   width: 3rem;
   border-radius: 0.2rem;

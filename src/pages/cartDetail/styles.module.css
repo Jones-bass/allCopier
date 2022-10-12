@@ -95,15 +95,22 @@ nav a:hover{
 }
 
 .buttonCar {
-  padding: 0px;
   width: 30px;
   height: 30px;
+
   align-items: center;
   text-align: center;
   justify-content: center;
   font-weight: bold;
-  cursor: pointer;
+
+  border-radius: 0.4rem;
   color: #fff;
+
+  cursor: pointer;
+}
+
+.buttonCar:hover {
+  background: tomato;
 }
 
 .animeLeft {

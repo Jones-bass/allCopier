@@ -12,6 +12,8 @@ import styles from "./styles.module.css";
 
 const CardProducts = ({product}) => {
   const cart = useSelector(state => state.cardCart.value);
+  const dispatch = useDispatch();
+
   const [sliderRef] = useKeenSlider({
     slides: {
       perView: 1,
@@ -19,7 +21,6 @@ const CardProducts = ({product}) => {
     },
   });
 
-  const dispatch = useDispatch();
 
   return (
       <div>

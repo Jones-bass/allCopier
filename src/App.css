@@ -12,6 +12,21 @@ p {
   margin: 0px;
 }
 
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  color: #eee;
+  background: linear-gradient(180deg, #F46F33 10%, #f31095 100%);
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #fea, 0 0 0 2px #fb1;
+}
+
 ul,
 li {
   list-style: none;
@@ -33,4 +48,6 @@ input {
 a {
   text-decoration: none;
 }
+
+
 

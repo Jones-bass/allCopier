@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import Footer from "../../Components/Footer/Footer";
 import LandPage from "../LandPage/LandPage";
 
-import { FaCartArrowDown } from "react-icons/fa";
+import { FaCartArrowDown, FaUser } from "react-icons/fa";
 import LogoMarca from "../../assets/tudoo.svg";
 
 import { ReactComponent as Sair } from "../../assets/sair.svg";
@@ -27,7 +27,10 @@ export function Home() {
         </Link>
         <nav className={styles.headerMenu}>
           
-        <Link to="/cartdetail" aria-label="cartdetail">{cart.value}<FaCartArrowDown size={24}/></Link>
+        <Link to="/cartdetail" aria-label="cartdetail">
+          {cart.value}
+        <FaCartArrowDown size={24}/>
+        </Link>
 
         <Link to="/contacts">Contatos</Link>
           <div className={styles.loginUser}>
@@ -37,7 +40,7 @@ export function Home() {
                 <button onClick={userLogout}><Sair /></button>
               </>
             ) : (
-              <Link className={styles.login} to="/login">Login
+              <Link to="/login">Login <FaUser/>
               </Link>
               
             )}
