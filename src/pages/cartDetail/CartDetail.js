@@ -8,11 +8,18 @@ import LogoMarca from "../../assets/tudoo.svg";
 import { ReactComponent as Sair } from "../../assets/sair.svg";
 
 import styles from "./styles.module.css";
+import { FaUser } from "react-icons/fa";
 
 const CartDetail = () => {
   const { data, userLogout } = useContext(UserContext);
   const cart = useSelector((state) => state.cardCart);
   const dispatch = useDispatch();
+
+  let totalPrice = 0;
+
+  for(let i = 0; i < cart.Cart.length; i++) {
+      totalPrice += (cart.Cart[i].price * cart.Cart[i].quantity)
+  }
 
   return (
     <div>
@@ -30,8 +37,8 @@ const CartDetail = () => {
                 </button>
               </>
             ) : (
-              <Link className={styles.login} to="/login">
-                Login
+              <Link to="/login"> Login <FaUser/>
+                
               </Link>
             )}
           </div>
@@ -112,7 +119,7 @@ const CartDetail = () => {
                   <th>{cart.value} itens</th>
                   <th></th>
                   <th></th>
-                  <th>R$ 200.00</th>
+                  <th>R$ {totalPrice.toFixed(2)}</th>
                 </tr>
               </tbody>
             </table>

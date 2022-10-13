@@ -38,18 +38,6 @@ nav a:hover{
   color: rgb(243, 241, 241);
 }
 
-.login::after {
-  content: '';
-  display: inline-block;
-  width: 14px;
-  height: 17px;
-  background: url('../../assets/usuario.svg') no-repeat center center;
-  margin-left: 0.5rem;
-  position: relative;
-  margin-right: 20px;
-  top: 2px;
-}
-
 .loginUser{
   display: flex;
   justify-content: center;
@@ -109,10 +97,6 @@ nav a:hover{
   cursor: pointer;
 }
 
-.buttonCar:hover {
-  background: tomato;
-}
-
 .animeLeft {
   opacity: 0;
   transform: translateX(-90px);
@@ -134,6 +118,8 @@ nav a:hover{
     margin-left: 2rem;
     margin-bottom: 0.5rem;
   }
+
+
   
   .cardContaneir {
     font-size: 10px;

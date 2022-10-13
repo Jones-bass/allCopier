@@ -2,6 +2,15 @@
   padding: 2rem;
 }
 
+.logoHeader {
+  display: flex;
+  height: 5rem;
+}
+
+ h1 {
+  margin-top: 2rem;
+}
+
 .perdeu {
   display: inline-block;
   color: #366;

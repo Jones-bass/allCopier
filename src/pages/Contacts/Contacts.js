@@ -9,6 +9,7 @@ import {
   FaMailBulk,
   FaHourglassHalf,
   FaAngellist,
+  FaUser,
 } from "react-icons/fa";
 
 import styles from "./styles.module.css";
@@ -32,8 +33,7 @@ const Contacts = () => {
                 </button>
               </>
             ) : (
-              <Link className={styles.login} to="/login">
-                Login
+              <Link to="/login"> Login <FaUser />
               </Link>
             )}
           </div>

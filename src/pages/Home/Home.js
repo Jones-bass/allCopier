@@ -7,7 +7,7 @@ import Footer from "../../Components/Footer/Footer";
 import LandPage from "../LandPage/LandPage";
 
 import { FaCartArrowDown, FaUser } from "react-icons/fa";
-import LogoMarca from "../../assets/tudoo.svg";
+import logoMarca from "../../assets/tudoo.svg";
 
 import { ReactComponent as Sair } from "../../assets/sair.svg";
 
@@ -15,24 +15,22 @@ import styles from './styles.module.css';
 
 export function Home() {
   const { data, userLogout } = useContext(UserContext);
-
   const cart = useSelector(state => state.cardCart)
-  console.log(cart)
 
   return (
     <div>
       <div className={styles.pageHeader}>
         <Link className={styles.logoHeader} to="/" aria-label="Home">
-          <img src={LogoMarca} alt="LogoMarca" />
+          <img src={logoMarca} alt="LogoMarca" />
         </Link>
+
         <nav className={styles.headerMenu}>
-          
-        <Link to="/cartdetail" aria-label="cartdetail">
+        <Link to="/myproducts" aria-label="myproducts">
           {cart.value}
         <FaCartArrowDown size={24}/>
         </Link>
 
-        <Link to="/contacts">Contatos</Link>
+        <Link to="/contact">Contatos</Link>
           <div className={styles.loginUser}>
             {data ? (
               <>

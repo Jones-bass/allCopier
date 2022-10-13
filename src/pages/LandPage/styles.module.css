@@ -97,7 +97,7 @@ li {
   .sobreInfo h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
-    background: linear-gradient(180deg, #F46F33 0%, #f31095 60%);
+	  background: linear-gradient(180deg, #f31095 0%, #F46F33 80%);
     color: white;
 
   }
@@ -105,7 +105,7 @@ li {
   .sobreInfo h2 {
     padding: 0.5rem;
     text-align: center;
-    background: linear-gradient(180deg, #F46F33 0%, #f31095 60%);
+	  background: linear-gradient(180deg, #f31095 0%, #F46F33 80%);
     color: white;
   }
 

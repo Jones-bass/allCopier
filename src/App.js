@@ -23,8 +23,8 @@ function App() {
               <Route path="/" element={<HomeScreen />} />
               <Route path="/login/*" element={<Login />} />
               <Route path="/home/" element={<Home/>} />
-              <Route path="/contacts/" element={<Contacts />} />
-              <Route path="/cartdetail/" element={<CartDetail />} />
+              <Route path="/contact/" element={<Contacts />} />
+              <Route path="/myproducts/" element={<CartDetail />} />
             </Routes>
           </UserStorage>
         </BrowserRouter>

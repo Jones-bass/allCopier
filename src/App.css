@@ -50,4 +50,13 @@ a {
 }
 
 
+@media (max-width: 720px){
+  button:hover 
+  button:focus {
+    outline: none;
+    background: blue;
+    box-shadow: none;
+  }
+}
+
 

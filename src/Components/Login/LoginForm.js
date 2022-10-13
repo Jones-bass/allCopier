@@ -4,6 +4,7 @@ import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import useForm from '../../Hooks/useForm';
 import { UserContext } from "../../UserContext";
+import logoMarca from "../../assets/tudoo.svg"
 import styles from './styles.module.css';
 
 
@@ -23,6 +24,10 @@ const LoginForm = () => {
   return (
     <section className={styles.container}>
       <div className={styles.animeLeft}>
+      <Link className={styles.logoHeader} to="/home" aria-label="Home">
+          <img src={logoMarca} alt="LogoMarca" />
+        </Link>
+
       <h1>Login</h1>
       <form action="" onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
