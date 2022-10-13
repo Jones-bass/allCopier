@@ -16,12 +16,12 @@ export function HomeScreen() {
       <div>
         <div className={styles.buttonContainer}>
           <button >
-            <Link style={{ color: "white", fontSize: '1.5rem'}} to="/home">
+            <Link to="/home">
               <FaChalkboard  style={{ marginBottom: '-0.2rem', marginRight: '1rem'}}/>
               Visitar</Link>
           </button>
           <button >
-            <Link style={{ color: "white", fontSize: '1.5rem'}} to="/login">
+            <Link to="/login">
               <FaUserCircle style={{ marginBottom: '-0.2rem', marginRight: '1rem'}}/>Logar</Link>
           </button>
         </div>

@@ -97,7 +97,7 @@ li {
   .sobreInfo h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
-    background-color: tomato;
+    background: linear-gradient(180deg, #F46F33 0%, #f31095 60%);
     color: white;
 
   }
@@ -105,13 +105,12 @@ li {
   .sobreInfo h2 {
     padding: 0.5rem;
     text-align: center;
-    background-color: tomato;
+    background: linear-gradient(180deg, #F46F33 0%, #f31095 60%);
     color: white;
   }
 
   .sobreInfo li {
     padding: 0.1rem;
-
   }
 
   .sobreInfo p {

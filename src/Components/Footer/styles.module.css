@@ -1,8 +1,6 @@
 footer {
-	background: linear-gradient(180deg, #F46F33 10%, #f31095 100%);
-
+	background: linear-gradient(180deg, #F46F33 0%, #f31095 60%);
 	padding: 2rem;
-	border-top: 1rem solid #D1D1D1;
 }
 
 h2,
@@ -63,7 +61,7 @@ span:hover {
 }
 
 .footerBottom {
-	border-top: 0.2rem solid #D1D1D1;
+	border-top: 0.2rem solid #ffffff;
 }
 
 .imgFooter {
