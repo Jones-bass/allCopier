@@ -1,11 +1,12 @@
 .containerConteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0rem 2.8rem;
   box-sizing: border-box;
   max-width: 85.7rem;
-  padding: 3rem;
+  padding: 8rem 2rem 0rem 2rem;
+  gap: 0rem 2.8rem;
 }
+
 
 .containerText {
   height: 350px;
@@ -49,7 +50,6 @@ button {
 .imgPersonalizados {
  width: 850px;
  height: 350px;
- max-width: 100%;
  object-fit: contain;
 }
 

@@ -33,7 +33,6 @@ p {
 	margin-left: 0.8rem;
 }
 
-
 .footerList li {
 	margin-bottom: 1rem;
 }
@@ -74,7 +73,7 @@ span:hover {
 	.imgFooter {
 		height: 3rem;
 		margin-top: 1rem;
-		margin-left: 0.5rem;
+		margin-left: 1rem;
 		align-items: center;
 	}
 
