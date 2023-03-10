@@ -1,0 +1,28 @@
+.button {
+  width: 12rem;
+  height: 3rem;
+  font-size: 1.2rem;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border-radius: 8px;
+  
+  background:linear-gradient(to bottom, #F46F33 5%, #f31095 100%);
+	background-color:#f24537;
+  box-shadow:inset 0px 45px 0px -24px #e67a73;
+
+  color:#ffffff;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  background:linear-gradient(to bottom, #f31095 5%, #F46F33 100%);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

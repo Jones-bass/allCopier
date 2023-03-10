@@ -1,0 +1,32 @@
+
+
+.containerIcon {
+  display: grid; 
+  padding: 5rem;
+}
+
+ .containerIcon button {
+  display: flex;
+  margin-top: 20rem;
+  margin: auto;
+}
+
+.containerIcon p {
+  margin-bottom: 30px;
+  color: black;
+  text-align: center;
+  line-height: 25px;
+}
+
+.iconImage {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+} 
+
+.iconImage img {
+  width: 6rem;
+  margin: 1rem;
+}
+  
+

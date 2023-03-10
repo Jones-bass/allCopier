@@ -1,11 +1,12 @@
 .pageHome {
   height: 100vh;
-  
+
   align-items: center;
   justify-content: center;
   text-align: center;
   
-  background: url('../../assets/laranja.jpg') no-repeat center center;
+  background: url('../../assets/background.jpg');
+  background-size: cover;
 }
  
 .AppLogo {
@@ -27,7 +28,6 @@
   
   color: #ffffff;
   background: rgb(245, 54, 20);
-  font-family: 'Roboto';
 
   border-radius: 0.4rem;
   box-shadow: 0rem 0rem 0.9rem 0.2rem;
@@ -35,26 +35,12 @@
 
 .buttonContainer {
   display: flex;
+  gap: 10px;
   margin-top: 2rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  
+
   padding: 0.5rem 7rem;
   flex-direction: row;
   justify-content: center;
-}
-
-.buttonContainer > button{
-  width: 12rem;
-  height: 3rem;
-  font-size: 1.2rem;
-
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  margin: 10px;
 }
 
 @media (max-width: 720px){

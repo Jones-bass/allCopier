@@ -1,0 +1,85 @@
+.containerProducts {
+  padding: 2rem;
+
+}
+
+
+
+.cardContaneir {
+  padding: 10px;
+  margin-top: 1rem;
+  background: rgb(238, 237, 237);
+  border-radius: 6px 36px 6px 36px;
+  border: solid 1px tomato;
+}
+
+.cardContaneir h3 {
+  align-items: end;
+  text-align: end;
+  padding: 10px;
+  margin-top: 1rem;
+
+}
+
+.buttonConfirmation {
+  display:inline-block;
+  margin: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+	background:linear-gradient(to bottom, #F46F33 5%, #f31095 100%);
+	background-color:#f24537;
+  box-shadow:inset 0px 39px 0px -24px #e67a73;
+
+	border-radius: 8px;
+	
+	cursor:pointer;
+	color:#ffffff;
+	
+	padding: 10px 24px;
+	text-decoration:none;
+}
+
+.buttonConfirmation:hover {
+	background:linear-gradient(to bottom, #f31095 5%, #F46F33 100%);
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-90px);
+  animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+@media (max-width: 720px){
+  .logoHeader{
+    display: flex;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardContaneir {
+    font-size: 10px;
+  }
+
+  .containerProducts h1 {
+    font-size: 16px;
+  }
+
+  .buttonConfirmation {
+    font-size: 0.5rem;
+    font-size: 10px;
+  }
+}
+
+
+
+
+
