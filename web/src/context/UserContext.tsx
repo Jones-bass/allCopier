@@ -1,15 +1,9 @@
-import {
-  ReactNode,
-  createContext,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { ReactNode, createContext, useCallback, useState } from 'react'
 import { toast } from 'react-toastify'
 import { Product } from '../@types/product'
-import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from '../services/apiUrl'
 import { formatPrice } from '../utils/formatPrice'
+import { api } from '../services/api'
+import { AuthState, SignInCredentials, User } from '../@types/user'
 
 export interface Cart extends Product {
   amount: number
@@ -27,18 +21,16 @@ export interface UpdateAmountProps {
 
 interface IUserContext {
   cart: Cart[]
+
+  user: User
+  signOut(): void
+  signIn(credentials: SignInCredentials): Promise<void>
+
   addCart: (product: Cart) => void
   removeCart: (id: number) => void
   updateAmount: (id: number, type: 'increment' | 'decrement') => void
-  userLogin: (username: string, password: string) => Promise<void>
-  userLogout: () => Promise<void>
   priceFormattedAndSubTotal: CartFormatted[]
   totalProducts: number
-
-  data: any
-  login: boolean | null
-  loading: boolean
-  error: string | null
 }
 
 interface IAuthContextProviderProps {
@@ -48,80 +40,40 @@ interface IAuthContextProviderProps {
 export const UserContext = createContext({} as IUserContext)
 
 export const UserStorage = ({ children }: IAuthContextProviderProps) => {
-  const [cart, setCart] = useState<Cart[]>(() => {
-    const storageCard = localStorage.getItem('@TudoCopiadora')
+  const [data, setData] = useState<AuthState>(() => {
+    const token = localStorage.getItem('@TudoCopiadora:token')
+    const userString = localStorage.getItem('@TudoCopiadora:user') // Fix the key here
 
-    if (storageCard) {
-      return JSON.parse(storageCard)
+    if (token && userString) {
+      api.defaults.headers.authorization = `Bearer ${token}`
+
+      return { token, user: JSON.parse(userString) }
     }
-    return []
+    return {} as AuthState
   })
 
-  const [data, setData] = useState<any>(null)
-  const [login, setLogin] = useState<boolean | null>(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const navigate = useNavigate()
+  const signIn = useCallback(async ({ email, password }: SignInCredentials) => {
+    const response = await api.post('sessions', { email, password })
+    const { token, user } = response.data
 
-  const userLogout = useCallback(
-    async function () {
-      setData(null)
-      setError(null)
-      setLoading(false)
-      setLogin(false)
-      window.localStorage.removeItem('token')
-      navigate('/')
-    },
-    [navigate],
-  )
+    localStorage.setItem('@TudoCopiadora:token', token)
+    localStorage.setItem('@TudoCopiadora:user', JSON.stringify(user))
 
-  async function getUser(token: string) {
-    const { url, options } = USER_GET(token)
-    const response = await fetch(url, options)
-    const json = await response.json()
-    setData(json)
-    setLogin(true)
-  }
+    api.defaults.headers.authorization = `Bearer ${token}`
 
-  async function userLogin(username: string, password: string) {
-    try {
-      setError(null)
-      setLoading(true)
-      const { url, options } = TOKEN_POST({ username, password })
-      const tokenRes = await fetch(url, options)
-      if (!tokenRes.ok) throw new Error('Usuario ou senha invalido')
-      const { token } = await tokenRes.json()
-      window.localStorage.setItem('token', token)
-      await getUser(token)
-      navigate('/home')
-    } catch (err) {
-      setError(err.message)
-      setLogin(false)
-    } finally {
-      setLoading(false)
-    }
-  }
+    setData({ token, user })
+  }, [])
 
-  useEffect(() => {
-    async function autoLogin() {
-      const token = window.localStorage.getItem('token')
-      if (token) {
-        try {
-          setError(null)
-          setLoading(null)
-          const { url, options } = TOKEN_VALIDATE_POST(token)
-          const response = await fetch(url, options)
-          if (!response.ok) throw new Error('token invalido')
-          await getUser(token)
-        } catch (err) {
-          userLogout()
-        } finally {
-          setLoading(false)
-        }
-      }
-    }
-    autoLogin()
-  }, [userLogout])
+  const signOut = useCallback(() => {
+    localStorage.removeItem('@TudoCopiadora:token')
+    localStorage.removeItem('@TudoCopiadora:user')
+
+    setData({} as AuthState)
+  }, [])
+
+  const [cart, setCart] = useState<Cart[]>(() => {
+    return []
+  })
 
   const priceFormattedAndSubTotal = cart.map((product) => ({
     ...product,
@@ -183,18 +135,15 @@ export const UserStorage = ({ children }: IAuthContextProviderProps) => {
   return (
     <UserContext.Provider
       value={{
+        user: data.user,
+        signIn,
+        signOut,
         totalProducts,
         priceFormattedAndSubTotal,
-        userLogin,
         cart,
         addCart,
         removeCart,
         updateAmount,
-        userLogout,
-        data,
-        login,
-        loading,
-        error,
       }}
     >
       {children}

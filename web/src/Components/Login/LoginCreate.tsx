@@ -1,6 +1,5 @@
 import { useForm, FormProvider } from 'react-hook-form'
 
-import { Input } from '../Input/Index'
 import { Button } from '../Button/Index'
 import { zodResolver } from '@hookform/resolvers/zod'
 
@@ -9,6 +8,8 @@ import { z } from 'zod'
 import { useCallback, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { api } from '../../services/api'
+import { toast } from 'react-toastify'
+import { Input } from '../Input/Index'
 
 const createUserSchema = z.object({
   name: z
@@ -69,9 +70,9 @@ export const LoginCreate = () => {
         await api.post('users', data)
 
         navigate('/')
-        alert('Usuário cadastrado com Sucesso.')
+        toast.success('Usuário cadastrado com Sucesso.')
       } catch {
-        alert('Ocorreu um erro ao se cadastrar, tente novamente!')
+        toast.error('Ocorreu um erro ao se cadastrar, tente novamente!')
         setLoading(false)
       }
     },
@@ -88,19 +89,22 @@ export const LoginCreate = () => {
           <form onSubmit={handleSubmit(handleOnSubmit)}>
             <Input
               name="name"
-              placeholder="Nome"
+              label="Nome"
               errorMessage={errors?.name?.message ?? ''}
+              required
             />
             <Input
               name="email"
-              placeholder="E-mail"
+              label="E-mail"
               errorMessage={errors?.email?.message ?? ''}
+              required
             />
             <Input
               name="password"
               type="password"
-              placeholder="Senha"
+              label="Senha"
               errorMessage={errors?.password?.message ?? ''}
+              required
             />
             <Button disabled={isSubmitting} type="submit">
               {loading ? 'Carregando...' : 'Cadastrar'}

@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 
 import { UserContext } from '../../context/UserContext'
-import { EmptyCart } from '../../Components/EmptyCart'
-import { DetailsCard } from '../../Components/CardDetails'
+import { EmptyCart } from '../../components/EmptyCart'
+import { DetailsCard } from '../../components/CardDetails'
 import { formatPrice } from '../../utils/formatPrice'
 
 import styles from './styles.module.css'

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { CardProducts } from '../../Components/CardProducts/CardProducts'
+import { CardProducts } from '../../components/CardProducts/CardProducts'
 
 import img1 from '../../assets/img1.jpg'
 import img2 from '../../assets/img2.jpg'
@@ -12,7 +12,7 @@ import { BiSelectMultiple } from 'react-icons/bi'
 import { apiProducts } from '../../services/apiProducts'
 import { Product } from '../../@types/product'
 import { toast } from 'react-toastify'
-import { LoadingComponent } from '../../Components/Loading'
+import { LoadingComponent } from '../../components/Loading'
 
 import 'keen-slider/keen-slider.min.css'
 import styles from './styles.module.css'

@@ -1,13 +1,14 @@
-.wrapper {
-  margin-bottom: 1rem;
+.wrapper_input {
+  margin: 14px 0px 20px 0px;
+  position: relative;
 }
 
-.input {
+.wrapper_input input {
   border: 1px solid #eee;
   display: block;
   width: 100%;
   font-size: 1rem;
-  padding: 0.8rem;
+  padding: 1.5rem;
   border-radius: 0.4rem;
   background: #eee;
   transition: 0.2s;
@@ -15,18 +16,43 @@
   text-align: left;
 }
 
-.input:focus,
-.input:hover {
-  outline: none;
-  border-color: #fb1;
-  background: white;
+
+.wrapper_input label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(0px, -5px);
+	transform-origin: left;
+	transition: transform 0.25s;
 }
 
-.label {
-  display: block;
-  font-size: 1rem;
-  line-height: 1;
-  padding-bottom: 0.5rem;
+.wrapper_input label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 1.3rem 0rem 0rem 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.wrapper_input input:focus + label, .wrapper_input input:valid + label {
+  transform: translateY(-60%) scale(.9);
+  margin: 0rem;
+  margin-left: 1rem;
+  border-radius: 8px;
+
+  padding: 0.4rem;
+  color: #fb1;
+
+  background-color: #fff;
+}
+
+.wrapper_input input:focus, .wrapper_input input:valid {
+  outline: none;
+  color: #fb1;
+  border-color: #fb1;
+  background: white;
 }
 
 .error {

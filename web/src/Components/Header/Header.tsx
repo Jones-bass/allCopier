@@ -10,7 +10,7 @@ import { UserContext } from '../../context/UserContext'
 import styles from './styles.module.css'
 
 export function Header() {
-  const { data, userLogout, cart } = useContext(UserContext)
+  const { cart, signOut, user } = useContext(UserContext)
 
   const cartQuantity = cart.length
 
@@ -28,10 +28,10 @@ export function Header() {
 
         <Link to="/contato">Contato</Link>
         <div className={styles.loginUser}>
-          {data ? (
+          {user ? (
             <>
-              <button onClick={userLogout}>
-                <BiExit size={36} /> {data.nome}
+              <button onClick={signOut}>
+                <BiExit size={36} /> {user.name}
               </button>
             </>
           ) : (

@@ -4,15 +4,17 @@ import { useFormContext } from 'react-hook-form'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string
+  label: string
   errorMessage: string
 }
 
-export const Input = ({ errorMessage, name, ...rest }: InputProps) => {
+export const Input = ({ errorMessage, name, label, ...rest }: InputProps) => {
   const { register } = useFormContext()
 
   return (
-    <div className={input.wrapper}>
-      <input className={input.input} {...register(name)} {...rest} />
+    <div className={input.wrapper_input}>
+      <input {...register(name)} {...rest} />
+      <label htmlFor={rest.id}>{label}</label>
       {errorMessage && <p className={input.error}>{errorMessage}</p>}
     </div>
   )

@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { HomeScreen } from './Components/HomeScreen/HomeScreen'
+import { HomeScreen } from './components/HomeScreen/HomeScreen'
 
 import { DefaultLayout } from './layouts/DefaultLayout'
 
 import { Home } from './pages/Home'
-import { Login } from './Components/Login/Login'
+import { Login } from './components/Login/Login'
 import { Contacts } from './pages/Contacts/Contacts'
 
 import { UserStorage } from './context/UserContext'
