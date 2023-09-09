@@ -30,8 +30,10 @@ export const CartPage = () => {
 
             <h3>{formatPrice(totalProducts)}</h3>
           </div>
+          <button className={styles.buttonConfirmation}>
+            Confirmar Pedido
+          </button>
         </div>
-        <button className={styles.buttonConfirmation}>Confirmar Pedido</button>
       </div>
     </div>
   )

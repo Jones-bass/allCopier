@@ -5,6 +5,12 @@
   padding: 5rem;
 }
 
+@media (max-width: 720px){
+  .containerIcon {
+    margin-bottom: 12%;
+  }
+}
+
  .containerIcon button {
   display: flex;
   margin-top: 20rem;
