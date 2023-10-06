@@ -40,17 +40,20 @@ nav a:hover{
 }
 
 nav span {
-  font-size: 12px;
+  font-size: 14px;
   position: absolute;
-  top: 55px;
-  right: 300px;
+  top: 8%;
+  right: 21.8%;
 
-  width: 15px;
+  width: 20px;
+  height: 20px;
   font-weight: bold;
-  height: 15px;
+ 
   border-radius: 50%;
   background-color: #38a887;
   color: rgb(243, 241, 241);
+
+  justify-content: center;
   align-items: center;
   text-align: center;
 }

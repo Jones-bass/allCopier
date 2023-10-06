@@ -1,6 +1,10 @@
-import fastifyCors from '@fastify/cors'
-
 import fastify from 'fastify'
+
+import fastifyCors from '@fastify/cors'
+import fastifyJwt from '@fastify/jwt'
+import fastifyCookie from '@fastify/cookie'
+
+
 import { ZodError } from 'zod'
 import { env } from './env'
 import { usersRoutes } from './http/controller/user/routes'
@@ -12,7 +16,20 @@ app.register(fastifyCors, {
   origin: ['http://localhost:3000', true],
 })
 
+app.register(fastifyJwt, {
+  secret: env.JWT_SECRET,
+  cookie: {
+    cookieName: 'refreshToken',
+    signed: false,
+  },
+  sign: {
+    expiresIn: '7d',
+  },
+})
+
 app.register(usersRoutes)
+
+app.register(fastifyCookie)
 
 app.setErrorHandler((error, _, reply) => {
   if (error instanceof ZodError) {
