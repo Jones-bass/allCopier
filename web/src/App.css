@@ -4,7 +4,8 @@
 
 body {
   margin: 0px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -18,7 +19,6 @@ button {
   border: none;
   cursor: pointer;
 }
-
 
 ul,
 li {

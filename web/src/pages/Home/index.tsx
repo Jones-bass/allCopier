@@ -6,7 +6,7 @@ import img2 from '../../assets/img2.jpg'
 import img3 from '../../assets/img3.jpg'
 import img4 from '../../assets/img4.jpg'
 
-import { FaChild, FaLayerGroup } from 'react-icons/fa'
+import { FaLayerGroup } from 'react-icons/fa'
 import { BiSelectMultiple } from 'react-icons/bi'
 
 import { apiProducts } from '../../services/apiProducts'
@@ -14,7 +14,6 @@ import { Product } from '../../@types/product'
 import { toast } from 'react-toastify'
 import { LoadingComponent } from '../../components/Loading'
 
-import 'keen-slider/keen-slider.min.css'
 import styles from './styles.module.css'
 
 export interface ProductFormat extends Product {
@@ -66,9 +65,6 @@ export const Home = () => {
       })}
 
       <div className={styles.containerSobre}>
-        <h1>
-          <FaChild style={{ marginBottom: '-0.5rem' }} /> SOBRE NÓS
-        </h1>
         <section className={styles.sobre}>
           <div className={styles.sobreInfo}>
             <h1>
@@ -86,7 +82,7 @@ export const Home = () => {
               <div>
                 {textIcons.map((item, index) => (
                   <li key={index} className={styles.iconsService}>
-                    <BiSelectMultiple color="tomato" /> {item}
+                    <BiSelectMultiple color="#fc00ff" /> {item}
                   </li>
                 ))}
               </div>

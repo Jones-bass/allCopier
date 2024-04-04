@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { FaCartArrowDown, FaUser } from 'react-icons/fa'
+import { FaCartArrowDown, FaUserCircle } from 'react-icons/fa'
 import { BiExit } from 'react-icons/bi'
 
 import { Link } from 'react-router-dom'
@@ -22,7 +22,7 @@ export function Header() {
 
       <nav className={styles.headerMenu}>
         <Link to="/meusprodutos" aria-label="meusprodutos">
-          {!cartQuantity ? null : <span> {cartQuantity}</span>}
+          {!cartQuantity ? null : <span>{cartQuantity}</span>}
           <FaCartArrowDown size={24} />
         </Link>
 
@@ -36,7 +36,7 @@ export function Header() {
             </>
           ) : (
             <Link to="/login">
-              Login <FaUser />
+              <FaUserCircle size={25} />
             </Link>
           )}
         </div>

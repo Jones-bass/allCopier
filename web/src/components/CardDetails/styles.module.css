@@ -22,7 +22,7 @@
   width: 4rem;
   height: 4rem;
 
-  border: solid 1px tomato;
+  border: solid 1px #fc00ff;
   border-radius: 8px;
 }
 
@@ -83,7 +83,7 @@ button {
 
 .containerButton button:hover,
 .containerButton button:focus {
-color: tomato;
+color: #fc00ff;
 box-shadow: none;
 }
 

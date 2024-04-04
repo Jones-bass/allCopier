@@ -11,6 +11,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { UserContext } from '../../context/UserContext'
 import { toast } from 'react-toastify'
 import { Input } from '../Input/Index'
+import colors from '../../assets/colors.jpg'
 
 const createUserSchema = z.object({
   email: z
@@ -75,40 +76,45 @@ export const LoginForm = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.animeLeft}>
-        <h1>Login</h1>
+      <div className={styles.content}>
+        <div className={styles.animeLeft}>
+          <h1>Login</h1>
 
-        <FormProvider {...createUserForm}>
-          <form onSubmit={handleSubmit(handleOnSubmit)}>
-            <Input
-              name="email"
-              label="E-mail"
-              errorMessage={errors?.email?.message ?? ''}
-              required
-            />
-            <Input
-              name="password"
-              type="password"
-              label="Senha"
-              errorMessage={errors?.password?.message ?? ''}
-              required
-            />
-            <Button disabled={isSubmitting} type="submit">
-              {loading ? 'Carregando...' : 'Entrar'}
-            </Button>
-          </form>
-        </FormProvider>
+          <FormProvider {...createUserForm}>
+            <form onSubmit={handleSubmit(handleOnSubmit)}>
+              <Input
+                name="email"
+                label="E-mail"
+                errorMessage={errors?.email?.message ?? ''}
+                required
+              />
+              <Input
+                name="password"
+                type="password"
+                label="Senha"
+                errorMessage={errors?.password?.message ?? ''}
+                required
+              />
+              <Button disabled={isSubmitting} type="submit">
+                {loading ? 'Carregando...' : 'Entrar'}
+              </Button>
+            </form>
+          </FormProvider>
 
-        <Link className={styles.perdeu} to="/login/perdeu">
-          Perdeu a Senha?
-        </Link>
-        <div>
-          <br />
-          <p style={{ color: 'black' }}>Ainda não possui conta?</p>
-          <Link to="/login/criar" className={styles.subtitle}>
-            Cadastre-se
+          <Link className={styles.perdeu} to="/login/perdeu">
+            Perdeu a Senha?
           </Link>
+          <div>
+            <br />
+            <p style={{ color: 'black' }}>Ainda não possui conta?</p>
+            <Link to="/login/criar" className={styles.subtitle}>
+              Cadastre-se
+            </Link>
+          </div>
         </div>
+      </div>
+      <div className={styles.backgroundIMG}>
+        <img src={colors} alt="" />
       </div>
     </section>
   )

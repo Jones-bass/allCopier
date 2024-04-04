@@ -6,7 +6,6 @@
   align-items: center;
 
   padding: 0px 50px 0px 50px;
-  
 
   width: 100%;
 }
@@ -35,30 +34,30 @@
 }
 
 nav a:hover{
-  background-color: tomato;
-  color: rgb(243, 241, 241);
+  background-color: #fc00ff;
+  color: #fff;
+  transition: 0.5s;
 }
 
 nav span {
-  font-size: 14px;
-  position: absolute;
-  top: 8%;
+  font-size: 12px;
+  position: relative;
+  top: 50%;
+  transform: translateY(200%);
   right: 21.8%;
-
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   font-weight: bold;
- 
   border-radius: 50%;
   background-color: #38a887;
   color: rgb(243, 241, 241);
-
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.loginUser{
+.loginUser {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,19 +67,13 @@ nav span {
   display: flex;
   flex-direction: column;
 
-  border-color: tomato;
+  border-color: #fc00ff;
   cursor: pointer;
-  
 }
 
 @media (max-width: 720px){
   .pageHeader{
     background: rgb(238, 237, 237);
-  }
-
-  nav span {
-    top: 50px;
-    right: 225px;    
   }
 
   .logoHeader{

@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom'
 import { api } from '../../services/api'
 import { toast } from 'react-toastify'
 import { Input } from '../Input/Index'
+import colors from '../../assets/colors.jpg'
 
 const createUserSchema = z.object({
   name: z
@@ -82,35 +83,40 @@ export const LoginCreate = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.animeLeft}>
-        <h1>Cadastre-se</h1>
+      <div className={styles.content}>
+        <div className={styles.animeLeft}>
+          <h1>Cadastre-se</h1>
 
-        <FormProvider {...createUserForm}>
-          <form onSubmit={handleSubmit(handleOnSubmit)}>
-            <Input
-              name="name"
-              label="Nome"
-              errorMessage={errors?.name?.message ?? ''}
-              required
-            />
-            <Input
-              name="email"
-              label="E-mail"
-              errorMessage={errors?.email?.message ?? ''}
-              required
-            />
-            <Input
-              name="password"
-              type="password"
-              label="Senha"
-              errorMessage={errors?.password?.message ?? ''}
-              required
-            />
-            <Button disabled={isSubmitting} type="submit">
-              {loading ? 'Carregando...' : 'Cadastrar'}
-            </Button>
-          </form>
-        </FormProvider>
+          <FormProvider {...createUserForm}>
+            <form onSubmit={handleSubmit(handleOnSubmit)}>
+              <Input
+                name="name"
+                label="Nome"
+                errorMessage={errors?.name?.message ?? ''}
+                required
+              />
+              <Input
+                name="email"
+                label="E-mail"
+                errorMessage={errors?.email?.message ?? ''}
+                required
+              />
+              <Input
+                name="password"
+                type="password"
+                label="Senha"
+                errorMessage={errors?.password?.message ?? ''}
+                required
+              />
+              <Button disabled={isSubmitting} type="submit">
+                {loading ? 'Carregando...' : 'Cadastrar'}
+              </Button>
+            </form>
+          </FormProvider>
+        </div>
+      </div>
+      <div className={styles.backgroundIMG}>
+        <img src={colors} alt="" />
       </div>
     </section>
   )

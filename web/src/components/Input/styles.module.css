@@ -44,15 +44,15 @@
   border-radius: 8px;
 
   padding: 0.4rem;
-  color: #fb1;
+  color:  #fc00ff;
 
   background-color: #fff;
 }
 
 .wrapper_input input:focus, .wrapper_input input:valid {
   outline: none;
-  color: #fb1;
-  border-color: #fb1;
+  color:  #fc00ff;
+  border-color:  #fc00ff;
   background: white;
 }
 

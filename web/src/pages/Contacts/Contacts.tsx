@@ -47,7 +47,7 @@ export const Contacts = () => {
             <FaWhatsapp
               style={{ marginBottom: '-0.2rem', marginRight: '0.2rem' }}
             />
-            79 9 9923-242 <br />
+            79 9 9923-2429 <br />
             <FaMailBulk
               style={{ marginBottom: '-0.2rem', marginRight: '0.2rem' }}
             />

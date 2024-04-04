@@ -5,6 +5,7 @@
   padding: 2.5rem;
   text-align: center;
   background: rgb(238, 237, 237);
+  margin-bottom:  -5rem;
 }
 
 .containerText  {
@@ -14,17 +15,15 @@
 }
 
 .sobre {
-  max-width: 85.7rem;
   padding: 4rem;
   display: flex;
   flex-wrap: wrap;
 }
 
-
 .sobreInfo h1 {
   font-size: 2rem;
   background: rgb(238, 237, 237);
-  margin-bottom: 0.5em;
+  margin-bottom:  1rem;
 }
 
 .sobreInfo h2 {
@@ -90,7 +89,7 @@ li {
   }
 
   .sobre {
-    border-top: 0.3rem solid tomato;
+    border-top: 0.3rem solid #fc00ff;
     padding: 1.4rem;
   }
 

@@ -1,39 +1,62 @@
 .pageHome {
   height: 100vh;
-
   align-items: center;
   justify-content: center;
   text-align: center;
   
-  background: url('../../assets/background.jpg');
+  display: flex;
+  align-items: stretch;
+  
+  background: #ff00cc; 
+  background: -webkit-linear-gradient(to right,#ff00cc, #333380); 
+  background: linear-gradient(to right,#ff00cc, #333399); 
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  place-content: center;
+  
+  width: 100%;
+  max-width: 950px;
+}
+
+.back {
+  flex: 1;
+  background: url('../../assets/geo.png');
   background-size: cover;
 }
- 
-.AppLogo {
-  display: flex;
-  padding-top: 2.5rem;
-  margin: auto;
+
+.linesImg {
+  position: absolute;
+  width: 10vw; 
+  top: 0;
+  left: 0;
 }
 
-.introduction h1{
-  display: grid;
-  width: 20rem;
-  height: 3rem;
+.objectImg {
+  position: absolute;
+  width: 15vw; 
+  top: 33vw;
+  left: 0;
+}
 
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  margin-top: 3rem;
-  
-  color: #ffffff;
-  background: rgb(245, 54, 20);
+.waveImg {
+  position: absolute;
+  width: 15vw;
+  top: 10vw; 
+  left: 60vw; 
+}
 
-  border-radius: 0.4rem;
-  box-shadow: 0rem 0rem 0.9rem 0.2rem;
+.AppLogo {
+  display: flex;
+  margin-left: 10rem;
 }
 
 .buttonContainer {
+  margin-left: 10rem;
   display: flex;
   gap: 10px;
   margin-top: 2rem;
@@ -43,28 +66,53 @@
   justify-content: center;
 }
 
-@media (max-width: 720px){
-  .introduction {
-    margin-top: 6rem;
+@media (max-width: 1200px){
+  .linesImg {
+    width: 18vw; 
   }
-
-  .introduction h1{
-    width: 15rem;
-    height: 2rem;
-    font-size: 1rem;
+  
+  .waveImg {
+    width: 25vw;
+    left: 70vw;
   }
+  
+  .zigImg {
+    width: 7vw; 
+    top: 75vw; 
+    left: 85vw;
+  } 
 
-  .buttonContainer {
-    margin-top: 2rem;
-    flex-direction: column;
-  }
-
-  .buttonContainer > button{
-    margin-bottom: 0;
-    width: 10rem;
-    height: 3rem;
+  .objectImg {
+    width: 25vw; 
+    top: 31vw;
+    left: 0;
   }
 }
+
+@media (max-width: 950px){
+  .objectImg {
+    width: 25vw; 
+    top: 44vw;
+    left: 0;
+  }
+}
+
+@media (max-width: 850px){
+  .objectImg {
+    width: 25vw; 
+    top: 53vw;
+    left: 0;
+  }
+}
+
+@media (max-width: 750px){
+  .objectImg {
+    width: 25vw; 
+    top: 62vw;
+    left: 0;
+  }
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .AppLogo {
@@ -86,18 +134,44 @@
 
 @media (max-width: 720px){
   @media (prefers-reduced-motion: no-preference) {
+    .pageHome {
+      height: 100vh;
+    }        
+
     .AppLogo {
       animation: AppLogo-float infinite 3s ease-in-out;
-     
-      display: flex;
       width: 20rem;
-      height: 22rem;
-  
-      padding-top: 10rem;
-      margin: auto;
+      margin-left: 0px;
+    }
+
+    .linesImg {
+      width: 30vw; 
+    }
+    
+    .waveImg {
+      width: 25vw;
+      left: 70vw;
+    }
+    
+    .zigImg {
+      width: 8vw; 
+      top: 75vw; 
+      left: 85vw;
+    } 
+ 
+    .objectImg {
+      width: 27vw; 
+      top: 130vw;
+      left: 0;
+    }
+    
+    .buttonContainer {
+      margin-left: 0px;
+      margin-top: 2rem;
+      flex-direction: column;
     }
   }
-    
+
 @keyframes AppLogo-float {
   0% {
     transform: translateY(0);

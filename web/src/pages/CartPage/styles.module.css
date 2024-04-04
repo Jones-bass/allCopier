@@ -10,7 +10,7 @@
   margin-top: 1rem;
   background: rgb(238, 237, 237);
   border-radius: 6px 36px 6px 36px;
-  border: solid 1px tomato;
+  border: solid 1px #fc00ff;
 }
 
 .cardContaneir h3 {

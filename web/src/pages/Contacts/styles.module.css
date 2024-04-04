@@ -50,7 +50,7 @@
     justify-content: center;
   }
   nav a:hover{
-    background-color: tomato;
+    background-color: #fc00ff;
     color: rgb(243, 241, 241);
   }
 
